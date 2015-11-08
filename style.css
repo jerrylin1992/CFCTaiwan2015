@@ -228,6 +228,10 @@ i.md-144:hover {
 	background-size:cover;
 }
 
+.home div {
+    padding: 16px 0px 16px 0px;
+}
+
 #section2 .home {
 	background-image:url(images/tofu_dark.png);
 }
@@ -285,14 +289,18 @@ table.info tr {
     height: 100%;
 }
 
+tr.info-subtitle td {
+    padding-left: 60px;
+}
+
 tr.info-subtitle td:first-of-type {
-    padding-right: 150px;
+    padding-left: 0px;
+    padding-right: 60px;
 }
 
-tr.info-subtitle td:last-of-type {
-    padding-left: 150px;
+table.info-title a {
+    visibility: hidden;
 }
-
 
 td.location {
     width: 50%;
@@ -307,8 +315,10 @@ td.chemical {
 }
 
 table.info-title {
-    margin-top: 1%;
-    margin-left: 18%;
+    width: 50%;
+    height: auto;
+    margin: auto;
+    z-index: -1;
 }
 
 div.chemical-card {
@@ -375,6 +385,9 @@ button[id^="candiedfruit-location-"] {
     /* 23.5-inch display */
     margin-top: 15%;
     margin-right: 15%;
+    /* 27-inch display */
+    margin-top: 18%;
+    margin-right: 15%;
 }
 
 #tofu-location-taichung-detail > .mdl-card__title {
@@ -400,6 +413,9 @@ button[id^="candiedfruit-location-"] {
     /* 23.5-inch display */
     margin-top: -2%;
     margin-left: 10%;
+    /* 27-inch display */
+    margin-top: -2%;
+    margin-left: 8%;
 }
 
 #bloodjelly-location-taoyuan-detail > .mdl-card__title {
@@ -411,6 +427,9 @@ button[id^="candiedfruit-location-"] {
 #bloodjelly-location-taichung {
     /* 23.5-inch display */
     margin-top: 13%;
+    margin-right: 17%;
+    /* 27-inch display */
+    margin-top: 16%;
     margin-right: 17%;
 }
 
@@ -437,6 +456,9 @@ button[id^="candiedfruit-location-"] {
     /* 23.5-inch display */
     margin-top: 20%;
     margin-right: 10%;
+    /* 27-inch display */
+    margin-top: 22%;
+    margin-right: 10%;
 }
 
 #seaweed-location-kaohsiung-detail > .mdl-card__title {
@@ -448,6 +470,9 @@ button[id^="candiedfruit-location-"] {
 #seaweed-location-pingtung {
     /* 23.5-inch display */
     margin-top: 5%;
+    margin-right: 16%;
+    /* 27-inch display */
+    margin-top: 7%;
     margin-right: 16%;
 }
 
@@ -473,6 +498,9 @@ button[id^="candiedfruit-location-"] {
 #bubbletea-location-taichung {
     /* 23.5-inch display */
     margin-top: 14%;
+    margin-right: 17%;
+    /* 27-inch display */
+    margin-top: 17%;
     margin-right: 17%;
 }
 
