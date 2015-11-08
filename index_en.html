@@ -160,73 +160,6 @@
                     e.preventDefault();
                     $.fn.fullpage.moveSlideLeft();
                 });
-
-                $('#setAutoScrollingFalse').click(function(e){
-                    e.preventDefault();
-                    $.fn.fullpage.setAutoScrolling(false);
-                });
-
-                $('#setAutoScrollingTrue').click(function(e){
-                    e.preventDefault();
-                    $.fn.fullpage.setAutoScrolling(true);
-                });
-
-                $('#setAllowScrollingFalse').click(function(e){
-                    e.preventDefault();
-                    $.fn.fullpage.setAllowScrolling(false);
-                });
-
-                $('#setAllowScrollingTrue').click(function(e){
-                    e.preventDefault();
-                    $.fn.fullpage.setAllowScrolling(true);
-                });
-
-                $('#setKeyboardScrollingFalse').click(function(e){
-                    e.preventDefault();
-                    $.fn.fullpage.setKeyboardScrolling(false);
-                });
-
-                $('#setKeyboardScrollingTrue').click(function(e){
-                    e.preventDefault();
-                    $.fn.fullpage.setKeyboardScrolling(true);
-                });
-
-                $('#setScrollingSpeed1500').click(function(e){
-                    e.preventDefault();
-                    $.fn.fullpage.setScrollingSpeed(2500);
-                });
-
-                $('#setScrollingSpeed700').click(function(e){
-                    e.preventDefault();
-                    $.fn.fullpage.setScrollingSpeed(700);
-                });
-
-                $('#destroy').click(function(e){
-                    e.preventDefault();
-                    $.fn.fullpage.destroy('all');
-                });
-
-                $('#undestroy').click(function(e){
-                    e.preventDefault();
-
-                    //fullPage.js initialization
-                    initialization();
-                });
-
-                $('#reBuild').click(function(e){
-                    e.preventDefault();
-                    $.fn.fullpage.reBuild();
-                });
-
-                $('#setLockAnchorsTrue').click(function(e){
-                    e.preventDefault;
-                    $.fn.fullpage.setLockAnchors(true);
-                });
-
-                $('#setLockAnchorsFalse').click(function(e){
-                    e.preventDefault;
-                    $.fn.fullpage.setLockAnchors(false);
-                });
             });
         </script>
 
@@ -244,38 +177,6 @@
 
     </head>
     <body>
-        <!--
-        <div id="actions">
-            <a id="moveSectionUp" href="#">moveSectionUp</a>
-            <a id="moveSectionDown" href="#">moveSectionDown</a>
-            <a id="silentMoveTo" href="#">silentMoveTo(2)</a>
-            <a id="moveTo" href="#">moveTo(2,3)</a>
-            <a id="silentMoveToSlide" href="#">silentMoveTo(2,3)</a>
-            <a id="moveSlideRight" href="#">moveSlideRight</a>
-            <a id="moveSlideLeft" href="#">moveSlideLeft</a>
-            <a id="setAutoScrollingTrue" href="#">setAutoScrolling(true)</a>
-            <a id="setAutoScrollingFalse" href="#">setAutoScrolling(false)</a>
-            <a id="setAllowScrollingTrue" href="#">setAllowScrolling(true)</a>
-            <a id="setAllowScrollingFalse" href="#">setAllowScrolling(false)</a>
-            <a id="setKeyboardScrollingTrue" href="#">setKeyboardScrolling(true)</a>
-            <a id="setKeyboardScrollingFalse" href="#">setKeyboardScrolling(false)</a>
-            <a id="setScrollingSpeed1500" href="#">setScrollingSpeed(1500)</a>
-            <a id="setScrollingSpeed700" href="#">setScrollingSpeed(700)</a>
-            <a id="destroy" href="#">destroy('all')</a>
-            <a id="undestroy" href="#">undestroy</a>
-            <a id="reBuild" href="#">reBuild</a>
-            <a id="setLockAnchorsTrue" href="#">setLockAnchors(true)</a>
-            <a id="setLockAnchorsFalse" href="#">setLockAnchors(false)</a>
-        </div>
-        -->
-        <!--
-        <ul id="menu">
-            <li data-menuanchor="firstPage"><a href="#firstPage">First slide</a></li>
-            <li data-menuanchor="secondPage"><a href="#secondPage">Second slide</a></li>
-            <li data-menuanchor="3rdPage"><a href="#3rdPage">Third slide</a></li>
-            <li data-menuanchor="4thpage"><a href="#4thpage">Fourth slide</a></li>
-        </ul>
-        -->
         <div class="demo-layout-transparent mdl-layout mdl-js-layout">
             <!-- Header -->
             <header class="mdl-layout__header mdl-layout__header--transparent">
@@ -292,8 +193,8 @@
 
                     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
                         for="language">
-                        <a class="mdl-menu__item" href="index.html"><li>English</li></a>
-                        <a disabled class="mdl-menu__item"><li>中文（繁體）</li></a>
+                        <a class="mdl-menu__item" href="index_en_au.html"><li>English</li></a>
+                        <a class="mdl-menu__item" href="index_cn_tw.html"><li>中文（繁體）</li></a>
                     </ul>
                 </div>
 </header>
@@ -303,7 +204,7 @@
                     <div class="mdl-logo"><a href="#pagetop">Contaminated Food Cases in Taiwan, 2015</a></div>
                     <ul class="mdl-mini-footer__link-list">
                         <li><a href="#pagedesigner">Designer's Message</a></li>
-                        <li><a href="#pagecredit">Credit</a></li>
+                        <li><a href="#pagecredit">Resources and Credit</a></li>
                     </ul>
                 </div>
 </footer>
@@ -318,7 +219,7 @@
                     <a class="mdl-navigation__link" href="#pagecase4">Case #04<br>Bubble Tea<br>April</a>
                     <a class="mdl-navigation__link" href="#pagecase5">Case #05<br>Candied Fruit<br>May</a>
                     <a class="mdl-navigation__link" href="#pagedesigner">Designer's Message</a>
-                    <a class="mdl-navigation__link" href="#pagecredit">Credit</a>
+                    <a class="mdl-navigation__link" href="#pagecredit">Resources and Credit</a>
                 </nav>
             </div>
             <!-- "Go to top button -->
@@ -415,7 +316,7 @@
                                      <div class="mdl-card__title">
                                         <h2 class="mdl-card__title-text mdl-typography--text-capitalize"></h2>
                                     </div>
-                                    <h4 class="mdl-typography--text-left mdl-typography--text-capitalize">Methyl yellow</h4>
+                                    <h4 class="mdl-typography--text-left mdl-typography--text-capitalize">Methyl yellow <small>&copy; Wikipedia</small></h4>
                                     <div class="mdl-card__supporting-text">Industrvuial colour additive<br>pH indicator<br>Possible carcinogen</div>
                                     <div class="mdl-card__supporting-text">Methyl yellow or Methyl yellow is a chemical compound which may be used as a pH indicator.</div>
                                     <div class="mdl-card__supporting-text">In aqueous solution at low pH, methyl yellow appears red. Between pH 2.9 and 4.0, methyl yellow undergoes a transition, to become yellow above pH 4.0.</div>
@@ -447,7 +348,7 @@
                                     <div class="mdl-card__title mdl-card--expand">
                                         <h2 class="mdl-card__title-text mdl-color-text--accent">Taichung</h2>
                                     </div>
-                                    <div class="mdl-card__supporting-text mdl-typography--text-capitalize"><strong>Methyl yellow Has been detected, 41,249 fermented tofu has been recycled from the shop Cheng-Ta-Hsiang</strong><br><small>&copy; 2015 Chun-Kai Chen, Apple Daily</small></div>
+                                    <div class="mdl-card__supporting-text mdl-typography--text-capitalize"><strong>Methyl yellow Has been detected, 41,249 fermented tofu has been recycled from the shop Cheng-Ta-Hsiang</strong><br><small>&copy; 2015 Sheng-Yu Yang, Apple Daily</small></div>
                                     <div class="mdl-card__supporting-text">6 products<br>41,249 units</div>
                                     <div class="mdl-card__actions mdl-card--border">
                                         <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="http://www.appledaily.com.tw/realtimenews/article/new/20150124/548200/" target="_blank">Read news</a>
@@ -504,7 +405,7 @@
                                      <div class="mdl-card__title">
                                         <h2 class="mdl-card__title-text mdl-typography--text-capitalize"></h2>
                                     </div>
-                                    <h4 class="mdl-typography--text-left mdl-typography--text-capitalize">Heavy metal</h4>
+                                    <h4 class="mdl-typography--text-left mdl-typography--text-capitalize">Heavy metal <small>&copy; Wikipedia</small></h4>
                                     <div class="mdl-card__supporting-text">Toxic metal<br>Inedible material</div>
                                     <div class="mdl-card__supporting-text">A toxic heavy metal is any relatively dense metal or metalloid that is noted for its potential toxicity, especially in environmental contexts. The term has particular application to cadmium, mercury, lead and arsenic, all of which appear in the World Health Organisation's list of 10 chemicals of major public concern.</div>
                                     <div class="mdl-card__supporting-text">Toxic heavy metals are found naturally in the earth, and become concentrated as a result of human caused activities. They enter plant, animal and human tissues via inhalation, diet and manual handling, and can bind to, and interfere with the functioning of vital cellular components. The toxic effects of arsenic, mercury and lead were known to the ancients but methodical studies of the toxicity of some heavy metals appear to date from only 1868. In humans, heavy metal poisoning is generally treated by the administration of chelating agents. Some elements regarded as heavy metals are essential, in small quantities, for human health.
@@ -609,7 +510,7 @@
                                      <div class="mdl-card__title">
                                         <h2 class="mdl-card__title-text mdl-typography--text-capitalize"></h2>
                                     </div>
-                                    <h4 class="mdl-typography--text-left mdl-typography--text-capitalize">industrial grade<br>ammonium bicarbonate</h4>
+                                    <h4 class="mdl-typography--text-left mdl-typography--text-capitalize">industrial grade<br>ammonium bicarbonate <small>&copy; Wikipedia</small></h4>
                                     <div class="mdl-card__supporting-text">Industrvuial additive<br>Leavening agent</div>
                                     <div class="mdl-card__supporting-text">Ammonium bicarbonate is an inorganic compound with formula (NH<sub>4</sub>)HCO<sub>3</sub>, simplified to NH<sub>5</sub>CO<sub>3</sub>. The compound has many names, reflecting its long history. Chemically speaking, it is the bicarbonate salt of the ammonium ion. It is a colourless solid that degrades readily to carbon dioxide, water and ammonia.</div>
                                     <div class="mdl-card__actions mdl-card--border">
@@ -716,7 +617,7 @@
                                     <div class="mdl-card__title">
                                         <h2 class="mdl-card__title-text mdl-typography--text-capitalize"></h2>
                                     </div>
-                                    <h4 class="mdl-typography--text-left mdl-typography--text-capitalize">Fipronil</h4>
+                                    <h4 class="mdl-typography--text-left mdl-typography--text-capitalize">Fipronil <small>&copy; Wikipedia</small></h4>
                                     <div class="mdl-card__supporting-text">Pesticide<br>Insecticide</div>
                                     <div class="mdl-card__supporting-text">Fipronil is a broad-use insecticide that belongs to the phenylpyrazole chemical family. Fipronil is a broad-spectrum insecticide that disrupts the insect central nervous system by blocking GABA-gated chloride channels and glutamate-gated chloride (GluCl) channels, resulting in central nervous system toxicity. This causes hyperexcitation of contaminated insects' nerves and muscles. Specificity of fipronil on insects may come from a better efficacy on GABA receptor, but also because GluCl channels do not exist in mammals.</div>
                                     <div class="mdl-card__actions mdl-card--border">
@@ -825,7 +726,7 @@
                                     <div class="mdl-card__title">
                                         <h2 class="mdl-card__title-text mdl-typography--text-capitalize"></h2>
                                     </div>
-                                    <h4 class="mdl-typography--text-left mdl-typography--text-capitalize">Sodium metabisulfite</h4>
+                                    <h4 class="mdl-typography--text-left mdl-typography--text-capitalize">Sodium metabisulfite <small>&copy; Wikipedia</small></h4>
                                     <div class="mdl-card__supporting-text">Industrial bleach</div>
                                     <div class="mdl-card__supporting-text">Sodium metabisulfite or sodium pyrosulfite is an inorganic compound of chemical formula Na<sub>2</sub>S<sub>2</sub>O<sub>5</sub>. The substance is sometimes referred to as disodium (metabisulfite). It is used as a disinfectant, antioxidant and preservative agent.</div>
                                     <div class="mdl-card__actions mdl-card--border">
@@ -844,7 +745,7 @@
                                     <div class="mdl-card__title mdl-card--expand">
                                         <h2 class="mdl-card__title-text mdl-color-text--accent">Changhua</h2>
                                     </div>
-                                    <div class="mdl-card__supporting-text mdl-typography--text-capitalize"><strong>207 Tons of Contaminated Candied Fruit Has Been Sampled</strong><br>&copy; 2015 Teng, Hui-Chen, Apple Daily</div>
+                                    <div class="mdl-card__supporting-text mdl-typography--text-capitalize"><strong>207 Tons of Contaminated Candied Fruit Has Been Sampled</strong><br>&copy; 2015 Hui-Chen Teng, Apple Daily</div>
                                     <div class="mdl-card__supporting-text">207,000 kilograms</div>
                                     <div class="mdl-card__actions mdl-card--border">
                                         <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="http://www.appledaily.com.tw/appledaily/article/headline/20150522/36564816/" target="_blank">Read news</a>
@@ -868,19 +769,17 @@
                         </tr>
                     </table>
                 </div>
-</div>
-
+            </div>
             <!-- Designer -->
             <div class="section mdl-typography--text-left" id="section7">
             	<div class="content">
-                <!--<div class="mdl-typography--display-4 mdl-color-text--white">Message from designer</div>-->
                     <table>
                         <tr>
                             <td>
                                 <div class="demo-card-image mdl-card mdl-shadow--2dp">
                                     <div class="mdl-card__title mdl-card--expand"></div>
                                     <div class="mdl-card__actions">
-                                        <!--<span class="demo-card-image__filename">Sheng-Che Lin (Jerry)</span>-->
+                                        <span class="demo-card-image__filename"></span>
                                     </div>
                                 </div>
                             </td>
@@ -907,108 +806,63 @@
 				</div>
             </div>
             
-            <!-- Credit -->
+            <!-- Resources and Credit -->
             <div class="section mdl-typography--text-center" id="section8">
-                <div class="mdl-typography--display-2 mdl-typography--text-left mdl-color-text--white">Credit</div><br>
+                <div class="mdl-typography--display-2 mdl-typography--text-left mdl-color-text--white">Resources and Credit</div><br>
                 <div class="content">
-                    
-                    
-                    
                     <div class="mdl-typography--body-1 mdl-typography--text-left mdl-color-text--white"><strong>Apple Daily</strong></div>
                     <ul class="mdl-typography--body-1 mdl-typography--text-left mdl-color-text--white">
-                        <li><a class="mdl-typography--text-capitalize"
-                               href="http://www.appledaily.com.tw/realtimenews/article/new/20150124/548200/"
-                               target="_blank">Methyl yellow Has been detected, 41,249 fermented tofu has been recycled from the shop Cheng-Ta-Hsiang</a></li>
-                        <li><a class="mdl-typography--text-capitalize"
-                               href="http://www.appledaily.com.tw/realtimenews/article/new/20150324/580178/"
-                               target="_blank">130,000 kilograms contaminated seaweed has been finished at Taichung District</a></li>
-                        <li><a class="mdl-typography--text-capitalize"
-                               href="http://www.appledaily.com.tw/appledaily/article/headline/20150522/36564816/"
-                               target="_blank">207 Tons of Contaminated Candied Fruit Has Been Sampled</a></li>
+                        <li><a class="mdl-typography--text-capitalize" href="http://www.appledaily.com.tw/realtimenews/article/new/20150124/548200/" target="_blank">Methyl yellow Has been detected, 41,249 fermented tofu has been recycled from the shop Cheng-Ta-Hsiang</a></li>
+                        <li><a class="mdl-typography--text-capitalize" href="http://www.appledaily.com.tw/realtimenews/article/new/20150324/580178/" target="_blank">130,000 kilograms contaminated seaweed has been finished at Taichung District</a></li>
+                        <li><a class="mdl-typography--text-capitalize" href="http://www.appledaily.com.tw/appledaily/article/headline/20150522/36564816/" target="_blank">207 Tons of Contaminated Candied Fruit Has Been Sampled</a></li>
                     </ul>
-                    
                     <div class="mdl-typography--body-1 mdl-typography--text-left mdl-color-text--white"><strong>Álvaro Trigo</strong></div>
                     <ul class="mdl-typography--body-1 mdl-typography--text-left mdl-color-text--white">
-                        <li><a class="mdl-typography--text-lowercase"
-                               href="http://alvarotrigo.com/fullPage/"
-                               target="_blank">fullPage.js</a></li>
+                        <li><a class="mdl-typography--text-lowercase" href="http://alvarotrigo.com/fullPage/" target="_blank">fullPage.js</a></li>
                     </ul>
-                    
-                    
                     <div class="mdl-typography--body-1 mdl-typography--text-left mdl-color-text--white"><strong>ETtoday</strong></div>
                     <ul class="mdl-typography--body-1 mdl-typography--text-left mdl-color-text--white">
-                        <li><a class="mdl-typography--text-capitalize"
-                               href="http://www.ettoday.net/news/20150429/499898.htm"
-                               target="_blank">Overusage of Fipronil Found in Green Tea From Sadou Bubble Tea</a></li>
-                        <li><a class="mdl-typography--text-capitalize"
-                               href="http://www.ettoday.net/news/20150505/502270.htm"
-                               target="_blank">Another 4 shops has detected Fipronil, "340 kilograms has been recycled from Easy Way" said by Taichung Health Bureau</a></li>
-                        <li><a class="mdl-typography--text-capitalize"
-                               href="http://www.ettoday.net/news/20150513/505904.htm"
-                               target="_blank">Earl Grey From Chun-Chun Kuan in Tainan Has Detected Overusage of Fipronil by over 3.5 times</a></li>
+                        <li><a class="mdl-typography--text-capitalize" href="http://www.ettoday.net/news/20150429/499898.htm" target="_blank">Overusage of Fipronil Found in Green Tea From Sadou Bubble Tea</a></li>
+                        <li><a class="mdl-typography--text-capitalize" href="http://www.ettoday.net/news/20150505/502270.htm"target="_blank">Another 4 shops has detected Fipronil, "340 kilograms has been recycled from Easy Way" said by Taichung Health Bureau</a></li>
+                        <li><a class="mdl-typography--text-capitalize" href="http://www.ettoday.net/news/20150513/505904.htm" target="_blank">Earl Grey From Chun-Chun Kuan in Tainan Has Detected Overusage of Fipronil by over 3.5 times</a></li>
                     </ul>
                     
                     <div class="mdl-typography--body-1 mdl-typography--text-left mdl-color-text--white"><strong>Food and Drug Administration</strong></div>
                     <ul class="mdl-typography--body-1 mdl-typography--text-left mdl-color-text--white">
-                        <li><a class="mdl-typography--text-capitalize"
-                               href="http://www.fda.gov.tw/TC/newsContent.aspx?id=12255&chk=27f049ff-c08f-46a7-a935-27e30b1d7ae4#.Vfh-VmR97IF"
-                               target="_blank">FDA keeps tracking contaminated seaweed with illegal non food grade ammonium bicarbonate additive</a></li>
+                        <li><a class="mdl-typography--text-capitalize" href="http://www.fda.gov.tw/TC/newsContent.aspx?id=12255&chk=27f049ff-c08f-46a7-a935-27e30b1d7ae4#.Vfh-VmR97IF" target="_blank">FDA keeps tracking contaminated seaweed with illegal non food grade ammonium bicarbonate additive</a></li>
                     </ul>
                     
                     <div class="mdl-typography--body-1 mdl-typography--text-left mdl-color-text--white"><strong>Gerd Altmann (Pixabay username: geralt)</strong></div>
                     <ul class="mdl-typography--body-1 mdl-typography--text-left mdl-color-text--white">
-                        <li><a class="mdl-typography--text-capitalize"
-                               href="https://pixabay.com/en/family-mother-children-boy-76786/"
-                               target="_blank">Family, Mother, Children, Boy</a></li>
-                        <li><a class="mdl-typography--text-capitalize"
-                               href="https://pixabay.com/en/man-woman-businessmen-economy-76202/"
-                               target="_blank">Man, Woman, Businessmen, Economy</a></li>
+                        <li><a class="mdl-typography--text-capitalize" href="https://pixabay.com/en/family-mother-children-boy-76786/" target="_blank">Family, Mother, Children, Boy</a></li>
+                        <li><a class="mdl-typography--text-capitalize" href="https://pixabay.com/en/man-woman-businessmen-economy-76202/" target="_blank">Man, Woman, Businessmen, Economy</a></li>
                     </ul>
                     
                     <div class="mdl-typography--body-1 mdl-typography--text-left mdl-color-text--white"><strong>Google</strong></div>
                     <ul class="mdl-typography--body-1 mdl-typography--text-left mdl-color-text--white">
-                        <li><a class="mdl-typography--text-capitalize"
-                               href="https://www.google.com/design/spec"
-                               target="_blank">Google design guidelines</a></li>
-                        <li><a class="mdl-typography--text-capitalize"
-                               href="http://www.getmdl.io"
-                               target="_blank">Material design lite</a></li>
+                        <li><a class="mdl-typography--text-capitalize" href="https://www.google.com/design/spec" target="_blank">Google design guidelines</a></li>
+                        <li><a class="mdl-typography--text-capitalize" href="http://www.getmdl.io" target="_blank">Material design lite</a></li>
                     </ul>
                     
                     <div class="mdl-typography--body-1 mdl-typography--text-left mdl-color-text--white"><strong>hANjAN STUDIO</strong></div>
                     <ul class="mdl-typography--body-1 mdl-typography--text-left mdl-color-text--white">
-                        <li><a class="mdl-typography--text-capitalize"
-                               href="http://www.eion.com.tw/Blogger/?Pid=1030"
-                               target="_blank">Taiwan Map Vector Graphics</a></li>
+                        <li><a class="mdl-typography--text-capitalize" href="http://www.eion.com.tw/Blogger/?Pid=1030" target="_blank">Taiwan Map Vector Graphics</a></li>
                     </ul>
                     
                     <div class="mdl-typography--body-1 mdl-typography--text-left mdl-color-text--white"><strong>Nownews Network</strong></div>
                     <ul class="mdl-typography--body-1 mdl-typography--text-left mdl-color-text--white">
-                        <li><a class="mdl-typography--text-capitalize"
-                               href="http://www.nownews.com/n/2015/01/21/1582298"
-                               target="_blank">The Same OEM! New Update For Contaminated Fermented Tofu</a></li>
+                        <li><a class="mdl-typography--text-capitalize" href="http://www.nownews.com/n/2015/01/21/1582298" target="_blank">The Same OEM! New Update For Contaminated Fermented Tofu</a></li>
                     </ul>
-                    
                     <div class="mdl-typography--body-1 mdl-typography--text-left mdl-color-text--white"><strong>Silvia (Pixabay username: sipa)</strong></div>
                     <ul class="mdl-typography--body-1 mdl-typography--text-left mdl-color-text--white">
-                        <li><a class="mdl-typography--text-capitalize"
-                               href="https://pixabay.com/en/man-run-runners-race-sporty-human-1001591/"
-                               target="_blank">Man, Run, Runners Race, Sporty, Human</a></li>
+                        <li><a class="mdl-typography--text-capitalize" href="https://pixabay.com/en/man-run-runners-race-sporty-human-1001591/" target="_blank">Man, Run, Runners Race, Sporty, Human</a></li>
                     </ul>
-                    
                     <div class="mdl-typography--body-1 mdl-typography--text-left mdl-color-text--white"><strong>udn.com</strong></div>
                     <ul class="mdl-typography--body-1 mdl-typography--text-left mdl-color-text--white">
-                        <li><a class="mdl-typography--text-capitalize"
-                               href="https://video.udn.com/news/278466"
-                               target="_blank">Scandals about Shuang-Peng's Contaminated Duck Blood Jelly, Checking Is Processed at Traditional Markets and Hypermarkets in Taoyuan</a></li>
-                        <li><a class="mdl-typography--text-capitalize"
-                               href="https://video.udn.com/topic/552/278175"
-                               target="_blank">Shuang-Peng's Contaminated Duck Blood Jelly Has Been Used by 11 Hot Pot Restaurant in New Taipei</a></li>
-                        <li><a class="mdl-typography--text-capitalize"
-                               href="https://video.udn.com/topic/552/279093"
-                               target="_blank">Blood jelly Imported to Restaurant Taichung City Government Has Been Eaten by The Civil Servants</a></li>
+                        <li><a class="mdl-typography--text-capitalize" href="https://video.udn.com/news/278466" target="_blank">Scandals about Shuang-Peng's Contaminated Duck Blood Jelly, Checking Is Processed at Traditional Markets and Hypermarkets in Taoyuan</a></li>
+                        <li><a class="mdl-typography--text-capitalize" href="https://video.udn.com/topic/552/278175" target="_blank">Shuang-Peng's Contaminated Duck Blood Jelly Has Been Used by 11 Hot Pot Restaurant in New Taipei</a></li>
+                        <li><a class="mdl-typography--text-capitalize" href="https://video.udn.com/topic/552/279093" target="_blank">Blood jelly Imported to Restaurant Taichung City Government Has Been Eaten by The Civil Servants</a></li>
                     </ul>
-                    
                     <div class="mdl-typography--body-1 mdl-typography--text-left mdl-color-text--white"><strong>Unkown (Pixabay username: OpenClipartVectors)</strong></div>
                     <ul class="mdl-typography--body-1 mdl-typography--text-left mdl-color-text--white">
                         <li><a class="mdl-typography--text-capitalize"
@@ -1016,9 +870,26 @@
                                target="_blank">Divorce, Parents, Child, People</a></li>
                     </ul>
                     
+                    <div class="mdl-typography--body-1 mdl-typography--text-left mdl-color-text--white"><strong>Wikipedia</strong></div>
+                    <ul class="mdl-typography--body-1 mdl-typography--text-left mdl-color-text--white">
+                        <li><a class="mdl-typography--text-capitalize"
+                               href="https://en.wikipedia.org/wiki/Ammonium_bicarbonate"
+                               target="_blank">Ammonium bicarbonate</a></li>
+                        <li><a class="mdl-typography--text-capitalize"
+                               href="https://en.wikipedia.org/wiki/Fipronil"
+                               target="_blank">Fipronil</a></li>
+                        <li><a class="mdl-typography--text-capitalize"
+                               href="https://en.wikipedia.org/wiki/Toxic_heavy_metal"
+                               target="_blank">Heavy metal</a></li>
+                        <li><a class="mdl-typography--text-capitalize"
+                               href="https://en.wikipedia.org/wiki/Methyl_yellow"
+                               target="_blank">Methyl yellow</a></li>
+                        <li><a class="mdl-typography--text-capitalize"
+                               href="https://en.wikipedia.org/wiki/Sodium_metabisulfite"
+                               target="_blank">Sodium metabisulfite</a></li>
+                    </ul>
                     <div class="thanks mdl-typography--subhead mdl-typography--text-left mdl-color-text--white" id="thanks">Special thanks to <strong>Jeffery Janet</strong> and <strong>Tamara Jordan</strong> for assistant.</div>
-                    <div class="thanks mdl-typography--caption mdl-typography--text-left mdl-color-text--white">All elements are used and modified for educational purpose.</div>
-
+                    <div class="thanks mdl-typography--caption mdl-typography--text-left mdl-color-text--white">All references and resources are used and modified for educational purpose.</div>
                 </div>
             </div>
         </div>

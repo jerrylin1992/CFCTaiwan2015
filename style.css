@@ -108,13 +108,10 @@ footer:hover {
 
 a[id="moveToTop"] {
 	position:absolute;
-	z-index:100;
+	z-index:1;
 	bottom:80px;
 	right:80px;
 }
-
-
-
 
 /* Top */
 #section0 .content {
@@ -819,9 +816,9 @@ div.name {
 #section8 div.content {
     height: 70%;
     
-    -webkit-column-count: 4; /* Chrome, Safari, Opera */
-    -moz-column-count: 4; /* Firefox */
-    column-count: 4;
+    -webkit-column-count: 5; /* Chrome, Safari, Opera */
+    -moz-column-count: 5; /* Firefox */
+    column-count: 5;
     
     -webkit-column-gap: 48px; /* Chrome, Safari, Opera */
     -moz-column-gap: 48px; /* Firefox */
