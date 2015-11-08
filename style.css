@@ -32,6 +32,9 @@
 .material-icons.md-24 { font-size: 24px; }
 .material-icons.md-36 { font-size: 36px; }
 .material-icons.md-48 { font-size: 48px; }
+.material-icons.md-72 { font-size: 72px; }
+.material-icons.md-96 { font-size: 96px; }
+.material-icons.md-144 { font-size: 144px; }
 .material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
 .material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
 .material-icons.md-light { color: rgba(255, 255, 255, 1); }
@@ -57,25 +60,26 @@ html * {
 }
 
 .mdl-layout__drawer a:hover {
-    background-color: #212121 !important;
-    color: white !important;
-    transform-origin: left;
-    transition-duration: 0.1s;
+    -webkit-transition: background-color 500ms ease-in-out;
+    -moz-transition: background-color 500ms ease-in-out;
+    -o-transition: background-color 500ms ease-in-out;
+    -ms-transition: background-color 500ms ease-in-out;
+    transition: background-color 500ms ease-in-out;
 }
 .mdl-layout__drawer a[href="#pagecase1"]:hover {
-    background-color: #B71C1C !important;
+    background-color: #EF9A9A !important; /* Material Red 200 */
 }
 .mdl-layout__drawer a[href="#pagecase2"]:hover {
-    background-color: #3E2723 !important;
+    background-color: #BCAAA4 !important; /* Material Brown 200 */
 }
 .mdl-layout__drawer a[href="#pagecase3"]:hover {
-    background-color: #1B5E20 !important;
+    background-color: #81C784 !important; /* Material Green 300 */
 }
 .mdl-layout__drawer a[href="#pagecase4"]:hover {
-    background-color: #F57F17 !important;
+    background-color: #FFF176 !important; /* Material Yellow 300 */
 }
 .mdl-layout__drawer a[href="#pagecase5"]:hover {
-    background-color: #BF360C !important;
+    background-color: #FFAB91 !important; /* Material Deep Orange 200 */
 }
 
 button#language {
@@ -121,6 +125,19 @@ a[id="moveToTop"] {
 
 #section0 .content div {
 	padding: 8px;
+}
+
+i.md-144 {
+    -webkit-transition: background-color 250ms ease-in-out;
+    -moz-transition: background-color 250ms ease-in-out;
+    -o-transition: background-color 250ms ease-in-out;
+    -ms-transition: background-color 250ms ease-in-out;
+    transition: background-color 250ms ease-in-out;
+    border-radius: 50%;
+}
+
+i.md-144:hover {
+    background-color: white;
 }
 
 /* Timleine menu */
@@ -485,7 +502,7 @@ button#candiedfruit-location-changhua {
 
 #candiedfruit-location-changhua-detail > .mdl-card__title {
 	color:#fff;
-	background:url(images/candiedfruit_changhua.png) center / cover;
+	background:url(images/candiedfruit_changhua.png) right / cover;
     background-color: black;
 }
 
@@ -796,7 +813,7 @@ div.name {
 }
 
 #section8 div.content {
-    height: 40%;
+    height: 60%;
     
     -webkit-column-count: 4; /* Chrome, Safari, Opera */
     -moz-column-count: 4; /* Firefox */
