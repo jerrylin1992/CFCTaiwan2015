@@ -1,0 +1,877 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* Material icons */
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+.material-icons.md-72 { font-size: 72px; }
+.material-icons.md-96 { font-size: 96px; }
+.material-icons.md-144 { font-size: 144px; }
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+
+/* General */
+html * {
+	text-decoration:none;
+}
+
+/* Header */
+.mdl-layout__drawer-button {
+	color:#FFFFFF;
+}
+
+.mdl-layout__drawer span {
+	margin-top:48px;
+	padding:0px;
+}
+
+.mdl-layout__drawer-button i {
+    font-size: 48px;
+}
+
+.mdl-layout__drawer a:hover {
+    -webkit-transition: background-color 300ms ease-in-out;
+    -moz-transition: background-color 300ms ease-in-out;
+    -o-transition: background-color 300ms ease-in-out;
+    -ms-transition: background-color 300ms ease-in-out;
+    transition: background-color 300ms ease-in-out;
+}
+.mdl-layout__drawer a[href="#pagecase1"]:hover {
+    background-color: #EF9A9A !important; /* Material Red 200 */
+}
+.mdl-layout__drawer a[href="#pagecase2"]:hover {
+    background-color: #BCAAA4 !important; /* Material Brown 200 */
+}
+.mdl-layout__drawer a[href="#pagecase3"]:hover {
+    background-color: #81C784 !important; /* Material Green 300 */
+}
+.mdl-layout__drawer a[href="#pagecase4"]:hover {
+    background-color: #FFF176 !important; /* Material Yellow 300 */
+}
+.mdl-layout__drawer a[href="#pagecase5"]:hover {
+    background-color: #FFAB91 !important; /* Material Deep Orange 200 */
+}
+
+button#language {
+    width: auto;
+    height: auto;
+}
+
+/* Footer */
+footer {
+	transition-duration:0.5s;
+	position:absolute;
+	width:100%;
+	bottom:0px;
+	z-index:1;
+	
+	opacity:.54;
+	
+	background:none !important;
+}
+
+footer:hover {
+	transition-duration: 0.5s;
+	opacity:.87;
+    background-color: #424242 !important;
+}
+
+a[id="moveToTop"] {
+	position:absolute;
+	z-index:1;
+	bottom:80px;
+	right:80px;
+}
+
+/* Top */
+#section0 .content {
+	width:50%;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#section0 .content div {
+	padding: 8px;
+}
+
+i.md-144 {
+    -webkit-transition: background-color 250ms ease-in-out;
+    -moz-transition: background-color 250ms ease-in-out;
+    -o-transition: background-color 250ms ease-in-out;
+    -ms-transition: background-color 250ms ease-in-out;
+    transition: background-color 250ms ease-in-out;
+    border-radius: 50%;
+}
+
+i.md-144:hover {
+    background-color: white;
+}
+
+/* Timleine menu */
+#section1 {
+	padding: 0px
+}
+
+#timeline-menu {
+	display: flex;
+	justify-content: space-between;
+	height: 100%;
+}
+#timeline-menu div {
+	white-space:nowrap;
+	width: 100%;
+}
+#timeline-menu-01 {
+	background:url(images/tofu_dark.png);
+	background-size:cover;
+}
+#timeline-menu-01:hover {
+	background:url(images/tofu_dark_blur.png);
+	background-size:cover;
+}
+#timeline-menu-02 {
+	background:url(images/bloodjelly_dark.png);
+	background-size:cover;
+}
+#timeline-menu-02:hover {
+	background:url(images/bloodjelly_dark_blur.png);
+	background-size:cover;
+}
+#timeline-menu-03 {
+	background:url(images/seaweed_dark.png);
+	background-size:cover;
+}
+#timeline-menu-03:hover {
+	background:url(images/seaweed_dark_blur.png);
+	background-size:cover;
+}
+#timeline-menu-04 {
+	background:url(images/tea_dark.png);
+	background-size:cover;
+}
+#timeline-menu-04:hover {
+	background:url(images/tea_dark_blur.png);
+}
+#timeline-menu-05 {
+	background:url(images/cannedfruit_dark.png);
+	background-size:cover;
+}
+#timeline-menu-05:hover {
+	background:url(images/cannedfruit_dark_blur.png);
+	background-size:cover;
+}
+
+#timeline-menu-01, #timeline-menu-01:hover, #timeline-menu-02, #timeline-menu-02:hover, #timeline-menu-03, #timeline-menu-03:hover, #timeline-menu-04, #timeline-menu-04:hover, #timeline-menu-05, #timeline-menu-05:hover {
+	background-color:black;
+	transition-duration:0.5s;
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+
+.timeline-menu-content {
+	position: relative;
+	margin-top: 100%;
+}
+
+.timeline-menu-content div {
+	padding: 8px 0px 8px 0px;
+}
+
+.timeline-menu-content button {
+	transition-duration:0.5s;
+	margin: 8px 0px 8px 0px;
+	transform: rotate(90deg);
+	background: none !important;
+}
+
+#timeline-menu-01:hover .timeline-menu-content, #timeline-menu-02:hover .timeline-menu-content, #timeline-menu-03:hover .timeline-menu-content, #timeline-menu-04:hover .timeline-menu-content, #timeline-menu-05:hover .timeline-menu-content, #timeline-menu-02:hover .timeline-menu-content {
+	transition-duration:0.5s;
+	background:rgba(0,0,0,0.87);
+}
+#timeline-menu-01:hover .timeline-menu-content button, #timeline-menu-02:hover .timeline-menu-content button, #timeline-menu-03:hover .timeline-menu-content button, #timeline-menu-04:hover .timeline-menu-content button, #timeline-menu-05:hover .timeline-menu-content button, #timeline-menu-02:hover .timeline-menu-content button {
+	transition-duration:0.5s;
+	background:#EF5350 !important;
+}
+
+/* Cases */
+.home {
+	background-size:cover;
+}
+
+.home div {
+    padding: 16px 0px 16px 0px;
+}
+
+#section2 .home {
+	background-image:url(images/tofu_dark.png);
+}
+#section3 .home {
+	background-image:url(images/bloodjelly_dark.png);
+	background-position:0% 60%;
+}
+#section4 .home {
+	background-image:url(images/seaweed_dark.png);
+}
+#section5 .home {
+	background-image:url(images/tea_dark.png);
+}
+#section6 .home {
+	background-image:url(images/cannedfruit_dark.png);
+}
+
+.case-menu {
+	margin-top:80px;
+}
+
+.case-menu button {
+	border-color:#fff !important;
+}
+
+.case-menu a {
+	padding:24px;
+}
+
+.case-menu button {
+	border:2px solid #757575;
+}
+
+
+
+th.contamination {
+    opacity: 0.54;
+}
+
+div.info-title {
+    position: absolute;
+}
+
+div.info {
+    height: 100% !important;
+}
+
+table.info {
+    width: 100%;
+    height: 90%;
+}
+
+table.info tr {
+    vertical-align: top;
+    height: 100%;
+}
+
+tr.info-subtitle td {
+    padding-left: 60px;
+}
+
+tr.info-subtitle td:first-of-type {
+    padding-left: 0px;
+    padding-right: 60px;
+}
+
+table.info-title a {
+    visibility: hidden;
+}
+
+td.location {
+    width: 50%;
+}
+
+td.chemical {
+    width: 50%;
+}
+
+.info-title {
+    position:absolute;
+}
+
+table.info-title {
+    width: 50%;
+    height: auto;
+    margin: auto;
+    z-index: -1;
+}
+
+div.chemical-card {
+    margin: auto;
+}
+
+table.info-title td {
+    padding-top: 80px;
+    padding-bottom: 24px;
+}
+
+table.info-title h4 {
+    padding-left: 16px;
+}
+
+
+/* location */
+td.location {
+	background-image:url(images/taiwan_border.svg);
+	background-repeat: no-repeat;
+	background-position: center center;
+    background-size: 90% 90%;
+}
+
+div[id^="tofu-location-"] div, 
+div[id^="bloodjelly-location-"] div, 
+div[id^="seaweed-location-"] div, 
+div[id^="bubbletea-location-"] div, 
+div[id^="candiedfruit-location-"] div {
+	text-align:left;
+}
+
+button[id^="tofu-location-"], 
+button[id^="bloodjelly-location-"], 
+button[id^="seaweed-location-"], 
+button[id^="bubbletea-location-"], 
+button[id^="candiedfruit-location-"] {
+	width:56px; height:56px;
+}
+
+
+
+/* location card */
+.demo-card-square.mdl-card {
+	width:320px;
+	height:320px;
+	height:400px;
+}
+
+/* Case01 */
+#tofu-location-taipei {
+    /* 23.5-inch display */
+    margin-top: 10%;
+    margin-left: 25%;
+}
+
+#tofu-location-taipei-detail > .mdl-card__title {
+	color:#fff;
+	background:url(images/tofu_taipei.png) center / cover;
+    background-color: black;
+}
+
+#tofu-location-taichung {
+    /* 23.5-inch display */
+    margin-top: 15%;
+    margin-right: 15%;
+    /* 27-inch display */
+    margin-top: 18%;
+    margin-right: 15%;
+}
+
+#tofu-location-taichung-detail > .mdl-card__title {
+	color:#fff;
+	background:url(images/tofu_taichung.png) center / cover;
+    background-color: black;
+}
+
+/* Case 02 */
+#bloodjelly-location-taipei {
+    /* 23.5-inch display */
+    margin-top: 10%;
+    margin-left: 25%;
+}
+
+#bloodjelly-location-taipei-detail > .mdl-card__title {
+	color:#fff;
+	background:url(images/bloodjelly_taipei.png) center / cover;
+    background-color: black;
+}
+
+#bloodjelly-location-taoyuan {
+    /* 23.5-inch display */
+    margin-top: -2%;
+    margin-left: 10%;
+    /* 27-inch display */
+    margin-top: -2%;
+    margin-left: 8%;
+}
+
+#bloodjelly-location-taoyuan-detail > .mdl-card__title {
+	color:#fff;
+	background:url(images/bloodjelly_taoyuan.png) center / cover;
+    background-color: black;
+}
+
+#bloodjelly-location-taichung {
+    /* 23.5-inch display */
+    margin-top: 13%;
+    margin-right: 17%;
+    /* 27-inch display */
+    margin-top: 16%;
+    margin-right: 17%;
+}
+
+#bloodjelly-location-taichung-detail > .mdl-card__title {
+	color:#fff;
+	background:url(images/bloodjelly_taichung.png) center / cover;
+    background-color: black;
+}
+
+/* Case 03 seaweed-location */
+#seaweed-location-taichung {
+    /* 23.5-inch display */
+    margin-top: 32%;
+    margin-right: 17%;
+}
+
+#seaweed-location-taichung-detail > .mdl-card__title {
+	color:#fff;
+	background:url(images/seaweed_taichung.png) center / cover;
+    background-color: black;
+}
+
+#seaweed-location-kaohsiung {
+    /* 23.5-inch display */
+    margin-top: 20%;
+    margin-right: 10%;
+    /* 27-inch display */
+    margin-top: 22%;
+    margin-right: 10%;
+}
+
+#seaweed-location-kaohsiung-detail > .mdl-card__title {
+	color:#fff;
+	background:url(images/seaweed_kaohsiung.png) center / cover;
+    background-color: black;
+}
+
+#seaweed-location-pingtung {
+    /* 23.5-inch display */
+    margin-top: 5%;
+    margin-right: 16%;
+    /* 27-inch display */
+    margin-top: 7%;
+    margin-right: 16%;
+}
+
+#seaweed-location-pingtung-detail > .mdl-card__title {
+	color:#fff;
+	background:url(images/seaweed_pingtung.png) center / cover;
+    background-color: black;
+}
+
+/* Case 04 */
+#bubbletea-location-taoyuan {
+    /* 23.5-inch display */
+    margin-top: 12%;
+    margin-left: 8%;
+}
+
+#bubbletea-location-taoyuan-detail > .mdl-card__title {
+	color:#fff;
+	background:url(images/bubbletea_taoyuan.png) center / cover;
+    background-color: black;
+}
+
+#bubbletea-location-taichung {
+    /* 23.5-inch display */
+    margin-top: 14%;
+    margin-right: 17%;
+    /* 27-inch display */
+    margin-top: 17%;
+    margin-right: 17%;
+}
+
+#bubbletea-location-taichung-detail > .mdl-card__title {
+	color:#fff;
+	background:url(images/bubbletea_taichung.png) center / cover;
+    background-color: black;
+}
+
+#bubbletea-location-tainan {
+    /* 23.5-inch display */
+    margin-top: 23%;
+    margin-right: 35%;
+}
+
+#bubbletea-location-tainan-detail > .mdl-card__title {
+	color:#fff;
+	background:url(images/bubbletea_tainan.png) center / cover;
+    background-color: black;
+}
+
+/* Case 05 */
+button#candiedfruit-location-changhua {
+    /* 23.5-inch display */
+    margin-top: 39%;
+    margin-right: 29%;
+}
+
+#candiedfruit-location-changhua-detail > .mdl-card__title {
+	color:#fff;
+	background:url(images/candiedfruit_changhua.png) right / cover;
+    background-color: black;
+}
+
+/* chemecal */
+
+td.chemical {
+	background-repeat: no-repeat;
+	background-position: center center;
+    background-size: 90% 90%;
+}
+
+/* case 1 background */
+#section2 td.chemical {
+	background-image:url(images/man.svg);
+}
+/* case 2 background */
+#section3 td.chemical {
+	background-image:url(images/couple.svg);
+}
+/* case 3 background */
+#section4 td.chemical {
+	background-image:url(images/woman.svg);
+}
+/* case 4 background */
+#section5 td.chemical {
+	background-image:url(images/parent_child.svg);
+}
+/* case 5 background */
+#section6 td.chemical {
+	background-image:url(images/runner.svg);
+}
+
+.chemical-card div {
+	text-align:left;
+}
+
+.demo-card-wide.mdl-card {
+	width:384px;
+}
+
+.demo-card-wide > .mdl-card__menu {
+	text-align:left !important;
+	color:#fff;
+}
+
+/* case #01 dimethyl yellow */
+#methylyellow > .mdl-card__title {
+	color:#fff;
+	height:176px;
+	background:url(images/methylyellow.png) center / cover;
+}
+
+/* case #02 heavy metal */
+#heavymetal > .mdl-card__title {
+	color:#fff;
+	height:176px;
+	background:url(images/heavymetal.png) center / cover;
+}
+
+/* case #03 ammonium bicarbonate */
+#ammoniumbicarbonate > .mdl-card__title {
+	color:#fff;
+	height:176px;
+	background:url(images/ammoniumbicarbonate.png) center / cover;
+}
+
+/* case #04 fipronil */
+#fipronil > .mdl-card__title {
+	color:#fff;
+	height:176px;
+	background:url(images/fipronil.png) center / cover;
+}
+
+/* case #05 sodiummetabisulfite */
+#sodiummetabisulfite > .mdl-card__title {
+	height:176px;
+	background:url(images/sodiummetabisulfite.png) center / cover;
+}
+
+div.tooltip {
+	color:#FFFFFF;
+	vertical-align:bottom;
+	margin:auto;
+	margin-top:7px;
+	width:100px;
+	background-color:#616161;
+	border-radius:2px;
+	padding:9px 16px 9px 16px;
+	font-size:14px;
+	opacity:10%;
+}
+div[for^="tofu-effects-"], 
+div[for^="bloodjelly-effects-"], 
+div[for^="seaweed-effects-"], 
+div[for^="bubbletea-effects-"], 
+div[for^="candiedfruit-effects-"] 
+{
+	visibility:hidden;
+}
+
+
+div[id^="tofu-effects-"]:hover, 
+div[id^="bloodjelly-effects-"]:hover, 
+div[id^="seaweed-effects-"]:hover, 
+div[id^="bubbletea-effects-"]:hover, 
+div[id^="candiedfruit-effects-"]:hover {
+    cursor: cell;
+}
+
+div[id^="tofu-effects-"]:hover + div[for^="tofu-effects-"], 
+div[id^="bloodjelly-effects-"]:hover + div[for^="bloodjelly-effects-"], 
+div[id^="seaweed-effects-"]:hover + div[for^="seaweed-effects-"], 
+div[id^="bubbletea-effects-"]:hover + div[for^="bubbletea-effects-"], 
+div[id^="candiedfruit-effects-"]:hover + div[for^="candiedfruit-effects-"] 
+{
+    -webkit-animation: pulse 200ms cubic-bezier(0,0,.2,1)forwards;
+    animation: pulse 200ms cubic-bezier(0,0,.2,1)forwards;
+}
+
+.chemical-title {
+	text-align:left !important;
+	margin-left:80px;
+}
+
+/* case #01 tofu chemical effects */
+#tofu-effects-lung-group {
+    /* 23.5-inch display */
+    margin-top: 25%;
+    margin-left: 0%;
+}
+#tofu-effects-liver-group {
+    /* 23.5-inch display */
+    margin-top: 5%;
+    margin-right: 10%;
+}
+#tofu-effects-bladder-group {
+    /* 23.5-inch display */
+    margin-top: 5%;
+    margin-left: 0%;
+}
+
+/* case #02 blood jelly chemical effects */
+#bloodjelly-effects-dementia-group {
+    /* 23.5-inch display */
+    margin-top: 10%;
+    margin-right: 5%;
+}
+#bloodjelly-effects-liver-group {
+    /* 23.5-inch display */
+    margin-top: 12%;
+    margin-left: 45%;
+}
+#bloodjelly-effects-diarrhea-group {
+    /* 23.5-inch display */
+    margin-top: -5%;
+    margin-left: 0%;
+}
+#bloodjelly-effects-kidney-group {
+    /* 23.5-inch display */
+    z-index: 100;
+    margin-top: 0%;
+    margin-left: 50%;
+}
+
+/* case #03 seaweed chemical effects */
+#seaweed-effects-central-group {
+    /* 23.5-inch display */
+    margin-top: 15%;
+    margin-left: 7%;
+}
+#seaweed-effects-heart-group {
+    /* 23.5-inch display */
+    margin-top: 0%;
+    margin-left: 2%;
+}
+#seaweed-effects-liver-group {
+    /* 23.5-inch display */
+    margin-top: 1%;
+    margin-right: 10%;
+}
+#seaweed-effects-Kidney-group {
+    /* 23.5-inch display */
+    margin-top: 1%;
+    margin-left: 1%;
+}
+
+/* case #04 bubble tea chemical effects */
+#bubbletea-effects-liver-group {
+    /* 23.5-inch display */
+    margin-top: 35%;
+    margin-left: 20%;
+    /* 27-inch display */
+    margin-top: 35%;
+}
+#bubbletea-effects-kidney-group {
+    /* 23.5-inch display */
+    margin-top: -5%;
+    margin-left: 35%;
+    /* 27-inch display */
+    margin-top: -2%;
+}
+#bubbletea-effects-thyroid-group {
+    /* 23.5-inch display */
+    margin-top: -5%;
+    margin-right: 40%;
+    /* 27-inch display */
+    margin-top: -2%;
+}
+#bubbletea-effects-infertility-group {
+    /* 23.5-inch display */
+    margin-top: -5%;
+    margin-left: 28%;
+    /* 27-inch display */
+    margin-top: -3%;
+}
+#bubbletea-effects-reproductive-group {
+    /* 23.5-inch display */
+    margin-top: 5%;
+    margin-right: 40%;
+    /* 27-inch display */
+    margin-top: 5%;
+}
+
+/* case #05 candied fruit chemical effects */
+#candiedfruit-effects-liver-group {
+    /* 23.5-inch display */
+    margin-top: 30%;
+    margin-right: 15%;
+}
+
+#candiedfruit-effects-kidney-group {
+    /* 23.5-inch display */
+    margin-top: 0%;
+    margin-right: 5%;
+}
+#candiedfruit-effects-diarrhea-group {
+    /* 23.5-inch display */
+    margin-top: -2%;
+    margin-right: 18%;
+}
+
+
+/* Designer */
+#section7 {
+    background:url(images/domeoflight.png) no-repeat center / cover;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+#section7 table {
+    width: 50%;
+    margin: auto;
+}
+
+
+#section7 div.demo-card-wide {
+    margin-left: 8px;
+    margin-right: auto;
+}
+#section7 div.demo-card-image {
+    margin-left: auto;
+    margin-right: 8px;
+}
+
+
+#section7 .demo-card-image.mdl-card {
+    width: 256px;
+    height: 256px;
+    width: 400px;
+    height: 400px;
+    background: url(images/jerry.png) center / cover;
+}
+#section7 .demo-card-image > #section7 .mdl-card__actions {
+    height: 52px;
+    padding: 16px;
+    background: rgba(0, 0, 0, 0.2);
+}
+#section7 .demo-card-image__filename {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+
+#section7 .demo-card-wide.mdl-card {
+    width: 512px;
+    height: 400px;
+}
+#section7 .demo-card-wide > #section7 .mdl-card__title {
+    color: #fff;
+    height: 176px;
+    background: url(images/jerry.png) center / cover;
+}
+#section7 .demo-card-wide > #section7 .mdl-card__menu {
+    color: #fff;
+}
+
+
+div.name {
+    padding-right: 24px;
+}
+
+/* Credit */
+#section8 {
+	padding-left: 80px;
+	padding-right: 80px;
+}
+
+#section8 div.content {
+    height: 70%;
+    
+    -webkit-column-count: 5; /* Chrome, Safari, Opera */
+    -moz-column-count: 5; /* Firefox */
+    column-count: 5;
+    
+    -webkit-column-gap: 48px; /* Chrome, Safari, Opera */
+    -moz-column-gap: 48px; /* Firefox */
+    column-gap: 48px;
+}
+
+#section8 div.content div {
+    padding: 8px;
+    border-radius: 2px;
+    background-color: #424242;
+}
+
+#section8 li {
+    list-style-type: none;
+    margin-left: -40px !important;
+    padding: 8px;
+}
+
+
+
+
+div.thanks {
+    background: none !important;
+}
+
+div#thanks {
+    margin-top: 500%;
+}

@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Contaminated Food Cases in Taiwan, 2015</title>
+        <meta name="author" content="Sheng-Che Lin (Jerry)" />
+        <meta name="description" content="Do You Really Know What You Are Eating?" />
+        <meta name="keywords"  content="" />
+        <meta name="Resource-type" content="Document" />
+        
+        <!-- jQuery -->
+        <script type="text/javascript" src="vendors/jquery.slimscroll.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+        
+        <!-- Material icons -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        
+        <!-- Material Design Lite -->
+        <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.grey-red.min.css" />
+        <link rel="stylesheet" href="mdl/material.grey-red.min.css" />
+        <script src="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.min.js"></script>
+        <script type="text/javascript" src="mdl/material.min.js"></script>
+        
+        <!-- fullPage.js-->
+        <script type="text/javascript" src="jquery.fullPage.js"></script>
+        <link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
+        
+        <!-- Customise -->
+        <link rel="stylesheet" href="style.css">
+        <script type="text/javascript">
+         $(document).ready(function() {
+
+                function initialization(){
+                    $('#myContainer').fullpage({
+                        sectionsColor: ['#212121', '#212121', '#B71C1C', '#3E2723', '#1B5E20', '#F57F17', '#BF360C', '#212121', '#212121' ],
+                        anchors: ['pagetop', 'pagetimeline', 'pagecase1', 'pagecase2', 'pagecase3', 'pagecase4', 'pagecase5', 'pagedesigner', 'pagecredit'],
+                        resize: false,
+                        animateAnchor:false,
+                        scrollOverflow: true,
+                        autoScrolling:true,
+                        responsive: 900,
+                        fitSection: false,
+                        menu: '#menu',
+                        navigation:true,
+                        continuousVertical:true,
+                        //paddingTop: '20px',
+                        css3: true,
+                        onLeave: function(index, nextIndex, direction){
+                            console.log("onLeave--" + "index: " + index + " nextIndex: " + nextIndex + " direction: " +  direction);
+                        },
+                        afterLoad: function(anchorLink, index){
+                            console.log("afterLoad--" + "anchorLink: " + anchorLink + " index: " + index );
+                        },
+                        afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){
+                            console.log("afterSlideLoad--" + "anchorLink: " + anchorLink + " index: " + index + " slideAnchor: " + slideAnchor + " slideIndex: " + slideIndex);
+                        },
+                        onSlideLeave: function(anchorLink, index, slideIndex, direction){
+                            console.log("onSlideLeave--" + "anchorLink: " + anchorLink + " index: " + index + " slideIndex: " + slideIndex + " direction: " + direction);
+                        },
+                        afterRender: function(){
+                            console.log("afterRender");
+                        },
+                        afterResize: function(){
+                            console.log("afterResize");
+                        }
+                    });
+                }
+
+                //fullPage.js initialization
+                initialization();
+
+
+                $('#moveSectionUp').click(function(e){
+                    e.preventDefault();
+                    $.fn.fullpage.moveSectionUp();
+                });
+
+                $('#moveSectionDown').click(function(e){
+                    e.preventDefault();
+                    $.fn.fullpage.moveSectionDown();
+                });
+
+                $('#moveTo').click(function(e){
+                    e.preventDefault();
+                    $.fn.fullpage.moveTo(2, 3);
+                });
+
+                $('#moveToTop').click(function(e){
+                    e.preventDefault();
+                    $.fn.fullpage.moveTo(2);
+                });
+
+                $('#moveToCase1').click(function(e){
+                    e.preventDefault();
+                    $.fn.fullpage.moveTo(3, 0);
+                });
+
+                $('#moveToCase1Info').click(function(e){
+                    e.preventDefault();
+                    $.fn.fullpage.moveTo(3, 1);
+                });
+
+                $('#moveToCase2').click(function(e){
+                    e.preventDefault();
+                    $.fn.fullpage.moveTo(4, 0);
+                });
+
+                $('#moveToCase2Info').click(function(e){
+                    e.preventDefault();
+                    $.fn.fullpage.moveTo(4, 1);
+                });
+
+                $('#moveToCase3').click(function(e){
+                    e.preventDefault();
+                    $.fn.fullpage.moveTo(5, 0);
+                });
+
+                $('#moveToCase3Info').click(function(e){
+                    e.preventDefault();
+                    $.fn.fullpage.moveTo(5, 1);
+                });
+
+                $('#moveToCase4').click(function(e){
+                    e.preventDefault();
+                    $.fn.fullpage.moveTo(6, 0);
+                });
+
+                $('#moveToCase4Info').click(function(e){
+                    e.preventDefault();
+                    $.fn.fullpage.moveTo(6, 1);
+                });
+
+                $('#moveToCase5').click(function(e){
+                    e.preventDefault();
+                    $.fn.fullpage.moveTo(7, 0);
+                });
+
+                $('#moveToCase5Info').click(function(e){
+                    e.preventDefault();
+                    $.fn.fullpage.moveTo(7, 1);
+                });
+
+                $('#silentMoveTo').click(function(e){
+                    e.preventDefault();
+                    $.fn.fullpage.silentMoveTo(2);
+                });
+
+                $('#silentMoveToSlide').click(function(e){
+                    e.preventDefault();
+                    $.fn.fullpage.silentMoveTo(2, 3);
+                });
+
+                $('#moveSlideRight').click(function(e){
+                    e.preventDefault();
+                    $.fn.fullpage.moveSlideRight();
+                });
+
+                $('#moveSlideLeft').click(function(e){
+                    e.preventDefault();
+                    $.fn.fullpage.moveSlideLeft();
+                });
+            });
+        </script>
+
+        <style>
+
+            /* Overwriting styles for control arrows for slides
+            * --------------------------------------- */
+            .fp-controlArrow.fp-prev {
+                left: 8px;
+            }
+            .fp-controlArrow.fp-next{
+                right: 8px;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div class="demo-layout-transparent mdl-layout mdl-js-layout">
+            <!-- Header -->
+            <header class="mdl-layout__header mdl-layout__header--transparent">
+                <div class="mdl-layout__header-row">
+                    <!-- Title -->
+                    <span class="mdl-layout-title"> </span>
+                    <!-- Add spacer, to align navigation to the right -->
+                    <div class="mdl-layout-spacer"></div>
+                    <!-- Navigation -->
+                    <nav class="mdl-navigation">
+                        <a class="mdl-navigation__link" href=""> </a>
+                    </nav>
+                    <button id="language" class="mdl-button mdl-js-button mdl-button--icon material-icons md-light md-48">language</button>
+
+                    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+                        for="language">
+                        <a class="mdl-menu__item" href="index_en.html"><li>English</li></a>
+                        <a class="mdl-menu__item" href="index_tc.html"><li>中文（繁體）</li></a>
+                    </ul>
+                </div>
+</header>
+            <!-- Footer -->
+            <footer class="mdl-mini-footer">
+                <div class="mdl-mini-footer__left-section">
+                    <div class="mdl-logo"><a href="#pagetop">Contaminated Food Cases in Taiwan, 2015</a></div>
+                    <ul class="mdl-mini-footer__link-list">
+                        <li><a href="#pagedesigner">Designer's Message</a></li>
+                        <li><a href="#pagecredit">Resources and Credit</a></li>
+                    </ul>
+                </div>
+</footer>
+            <!-- Drawer -->
+            <div class="mdl-layout__drawer">
+                <a class="mdl-layout-title" style="color: #FFFFFF; padding-bottom: 64px; background-color: #000;" href="#pagetop"><span class="mdl-layout-title">Contaminated<br>Food Cases<br>in Taiwan, 2015</span></a>
+                <nav class="mdl-navigation">
+                    <a class="mdl-navigation__link" href="#pagetimeline">Timeline</a>
+                    <a class="mdl-navigation__link" href="#pagecase1">Case #01<br>Fermented Tofu<br>January</a>
+                    <a class="mdl-navigation__link" href="#pagecase2">Case #02<br>Blood Jelly<br>February</a>
+                    <a class="mdl-navigation__link" href="#pagecase3">Case #03<br>Seaweed<br>March</a>
+                    <a class="mdl-navigation__link" href="#pagecase4">Case #04<br>Bubble Tea<br>April</a>
+                    <a class="mdl-navigation__link" href="#pagecase5">Case #05<br>Candied Fruit<br>May</a>
+                    <a class="mdl-navigation__link" href="#pagedesigner">Designer's Message</a>
+                    <a class="mdl-navigation__link" href="#pagecredit">Resources and Credit</a>
+                </nav>
+            </div>
+            <!-- "Go to top button -->
+            <a id="moveToTop" href="#"><button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored"><i class="material-icons">view_carousel</i></button></a> 
+        </div>
+
+        <div id="myContainer">
+            <!-- Top page -->
+            <div class="section" id="section0">
+            	<div class="content">
+                    <div class="mdl-typography--display-4 mdl-typography--text-uppercase mdl-color-text--white mdl-typography--font-black" id="title">Contaminated<br>Food Cases<br>in Taiwan, 2015</div>
+                    <div class="mdl-typography--display-2 mdl-color-text--grey-500 mdl-typography--text-right">Do You Really Know What You Are Eating?</div>
+                    <div class="mdl-typography--display-1 mdl-color-text--grey-700 mdl-typography--text-right">Explore the recent cases through the timeline</div>
+                    <div class="mdl-typography--text-right"><a id="moveSectionDown" href="#"><i class="material-icons md-144">keyboard_arrow_down</i></a></div>
+                </div>
+            </div>
+
+            <!-- Timeline -->
+            <div class="section" id="section1">
+                <div id="timeline-menu">
+                    <div id="timeline-menu-01">
+                        <div class="timeline-menu-content">
+                            <div class="mdl-typography--display-1 mdl-typography--text-center mdl-color-text--accent mdl-typography--font-light mdl-typography--text-lowercase">Case #01</div>
+                            <div class="mdl-typography--display-2 mdl-typography--text-center mdl-color-text--white">Fermented Tofu</div>
+                            <div class="mdl-typography--headline-color-contrast mdl-typography--text-center mdl-color-text--primary">January</div>
+                            <div class="mdl-typography--text-center"><a id="moveToCase1" href="#"><button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored"><i class="material-icons">arrow_forward</i></button></a></div>
+                        </div>
+                    </div>
+                    <div id="timeline-menu-02">
+                        <div class="timeline-menu-content">
+                            <div class="mdl-typography--display-1 mdl-typography--text-center mdl-color-text--accent mdl-typography--font-light mdl-typography--text-lowercase">Case #02</div>
+                            <div class="mdl-typography--display-2 mdl-typography--text-center mdl-color-text--white">Blood Jelly</div>
+                            <div class="mdl-typography--headline-color-contrast mdl-typography--text-center mdl-color-text--primary">February</div>
+                            <div class="mdl-typography--text-center"><a id="moveToCase2" href="#"><button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored"><i class="material-icons">arrow_forward</i></button></a></div>
+                        </div>
+                    </div>
+                    <div id="timeline-menu-03">
+                        <div class="timeline-menu-content">
+                            <div class="mdl-typography--text-center mdl-typography--display-1 mdl-color-text--accent mdl-typography--font-light mdl-typography--text-lowercase">Case #03</div>
+                            <div class="mdl-typography--text-center mdl-typography--display-2 mdl-color-text--white">Seaweed</div>
+                            <div class="mdl-typography--text-center mdl-typography--headline-color-contrast mdl-color-text--primary">March</div>
+                            <div class="mdl-typography--text-center"><a id="moveToCase3" href="#"><button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored"><i class="material-icons">arrow_forward</i></button></a></div>
+                        </div>
+                    </div>
+                    <div id="timeline-menu-04">
+                        <div class="timeline-menu-content">
+                            <div class="mdl-typography--text-center mdl-typography--display-1 mdl-color-text--accent mdl-typography--font-light mdl-typography--text-lowercase">Case #04</div>
+                            <div class="mdl-typography--text-center mdl-typography--display-2 mdl-color-text--white">Bubble Tea</div>
+                            <div class="mdl-typography--text-center mdl-typography--headline-color-contrast mdl-color-text--primary">April</div>
+                            <div class="mdl-typography--text-center"><a id="moveToCase4" href="#"><button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored"><i class="material-icons">arrow_forward</i></button></a></div>
+                        </div>
+                    </div>
+                    <div id="timeline-menu-05">
+                        <div class="timeline-menu-content">
+                            <div class="mdl-typography--text-center mdl-typography--display-1 mdl-color-text--accent mdl-typography--font-light mdl-typography--text-lowercase">Case #05</div>
+                            <div class="mdl-typography--text-center mdl-typography--display-2 mdl-color-text--white">Candied Fruit</div>
+                            <div class="mdl-typography--text-center mdl-typography--headline-color-contrast mdl-color-text--primary">May</div>
+                            <div class="mdl-typography--text-center"><a id="moveToCase5" href="#"><button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored"><i class="material-icons">arrow_forward</i></button></a></div>
+                        </div>
+                    </div>
+                </div>
+</div>
+            
+            <!-- Timeline Case #01 Fermented Tofu January -->
+            <div class="section mdl-typography--text-center" id="section2">
+                <div class="slide home">
+                    <div class="mdl-typography--display-2 mdl-color-text--accent mdl-typography--text-lowercase">Case #01</div>
+                    <div class="mdl-typography--display-4 mdl-color-text--white">Fermented Tofu</div>
+                    <div class="mdl-typography--display-1 mdl-color-text--white">January</div>
+                    <div class="case-menu"><a id="moveToCase1Info" href="#"><button class="mdl-button mdl-js-button mdl-color-text--white">See location and effects</button></a></div>
+                </div>
+                
+                <div class="slide">
+                    
+                    <!-- info title -->
+                    <table class="info-title">
+                        <tr>
+                            <th colspan="2" class="mdl-typography--display-1-color-contrast mdl-typography--text-center mdl-color-text--accent mdl-typography--text-lowercase">Case #01</th>
+                        </tr>
+                        <tr>
+                            <th colspan="2" class="mdl-typography--display-3 mdl-typography--text-center mdl-color-text--white">Fermented Tofu</th>
+                        </tr>
+                        <tr>
+                            <th colspan="2" class="mdl-typography--display-2 mdl-typography--text-center mdl-color-text--white contamination">Contamination</th>
+                        </tr>
+                        <tr class="info-subtitle">
+                            <td class="mdl-typography--display-1 mdl-typography--text-right mdl-color-text--white"><br><br>Contaminated<br>Location</td>
+                            <td class="mdl-typography--display-1 mdl-typography--text-left mdl-color-text--white"><br><br>Physiological<br>Effects</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <!-- chemical card -->
+                                <div class="chemical-card demo-card-wide mdl-card mdl-shadow--2dp" id="methylyellow">
+                                     <div class="mdl-card__title">
+                                        <h2 class="mdl-card__title-text mdl-typography--text-capitalize"></h2>
+                                    </div>
+                                    <h4 class="mdl-typography--text-left mdl-typography--text-capitalize">Methyl yellow <small>&copy; Wikipedia</small></h4>
+                                    <div class="mdl-card__supporting-text">Industrvuial colour additive<br>pH indicator<br>Possible carcinogen</div>
+                                    <div class="mdl-card__supporting-text">Methyl yellow or Methyl yellow is a chemical compound which may be used as a pH indicator.</div>
+                                    <div class="mdl-card__supporting-text">In aqueous solution at low pH, methyl yellow appears red. Between pH 2.9 and 4.0, methyl yellow undergoes a transition, to become yellow above pH 4.0.</div>
+                                    <div class="mdl-card__actions mdl-card--border">
+                                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" target="_blank" href="https://en.wikipedia.org/wiki/Methyl_yellow">Learn more</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    
+                    <table class="info">
+                        <tr>
+                            <td class="location">
+                                <!-- location cards -->
+                                <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--fab mdl-button--colored" id="tofu-location-taipei"><i class="material-icons">location_on</i></button><br>
+                                <div class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect demo-card-square mdl-card mdl-shadow--2dp" for="tofu-location-taipei" id="tofu-location-taipei-detail">
+                                    <div class="mdl-card__title mdl-card--expand">
+                                        <h2 class="mdl-card__title-text mdl-color-text--accent">Taipei</h2>
+                                    </div>
+                                    <div class="mdl-card__supporting-text mdl-typography--text-capitalize"><strong>The Same OEM! New Update For Contaminated Fermented Tofu</strong><br><small>&copy; 2015 Chun-Kai Chen, Nownews Network</small></div>
+                                    <div class="mdl-card__supporting-text">2 products<br>568 units<br>170.4 kilograms</div>
+                                    <div class="mdl-card__actions mdl-card--border">
+                                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="http://www.nownews.com/n/2015/01/21/1582298" target="_blank">Read news</a>
+                                    </div>
+                                </div>
+                                <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--fab mdl-button--colored" id="tofu-location-taichung"><i class="material-icons">location_on</i></button>
+                                <div class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect demo-card-square mdl-card mdl-shadow--2dp" for="tofu-location-taichung" id="tofu-location-taichung-detail">
+                                    <div class="mdl-card__title mdl-card--expand">
+                                        <h2 class="mdl-card__title-text mdl-color-text--accent">Taichung</h2>
+                                    </div>
+                                    <div class="mdl-card__supporting-text mdl-typography--text-capitalize"><strong>Methyl yellow Has been detected, 41,249 fermented tofu has been recycled from the shop Cheng-Ta-Hsiang</strong><br><small>&copy; 2015 Sheng-Yu Yang, Apple Daily</small></div>
+                                    <div class="mdl-card__supporting-text">6 products<br>41,249 units</div>
+                                    <div class="mdl-card__actions mdl-card--border">
+                                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="http://www.appledaily.com.tw/realtimenews/article/new/20150124/548200/" target="_blank">Read news</a>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="chemical">
+                                <!-- chemical effects -->
+                                <div id="tofu-effects-lung-group">
+                                    <div id="tofu-effects-lung" class="icon material-icons mdl-color-text--accent md-48">gps_fixed</div>
+                                    <div class="tooltip mdl-typography--font-medium" for="tofu-effects-lung">Lung cancer</div>
+                                </div>
+                                <div id="tofu-effects-liver-group">
+                                    <div id="tofu-effects-liver" class="icon mdl-color-text--accent material-icons md-48">gps_fixed</div>
+                                    <div class="tooltip mdl-typography--font-medium" for="tofu-effects-liver">Liver cancer</div>
+                                </div>
+                                <div id="tofu-effects-bladder-group">
+                                    <div id="tofu-effects-bladder" class="icon mdl-color-text--accent material-icons md-48">gps_fixed</div>
+                                    <div class="tooltip mdl-typography--font-medium" for="tofu-effects-bladder">Bladder cancer</div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+</div>
+            <!-- Timeline Case #02 Blood Jelly February -->
+            <div class="section mdl-typography--text-center" id="section3">
+                
+                <div class="slide home">
+                    <div class="mdl-typography--display-2 mdl-color-text--accent mdl-typography--text-lowercase">Case #02</div>
+                    <div class="mdl-typography--display-4 mdl-color-text--white mdl-typography--text-capitalize">Blood Jelly</div>
+                    <div class="mdl-typography--display-1 mdl-color-text--white mdl-typography--text-capitalize">February</div>
+                    <div class="case-menu"><a id="moveToCase2Info" href="#"><button class="mdl-button mdl-js-button mdl-color-text--white">See location and effects</button></a></div>
+                </div>
+                <div class="slide">
+                    <!-- Info title -->
+                    <table class="info-title">
+                        <tr>
+                            <th colspan="2" class="mdl-typography--display-1-color-contrast mdl-typography--text-center mdl-color-text--accent mdl-typography--text-lowercase">case #02</th>
+                        </tr>
+                        <tr>
+                            <th colspan="2" class="mdl-typography--display-3 mdl-typography--text-center mdl-color-text--white">Blood Jelly</th>
+                        </tr>
+                        <tr>
+                            <th colspan="2" class="mdl-typography--display-2 mdl-typography--text-center mdl-color-text--white contamination">Contamination</th>
+                        </tr>
+                        <tr class="info-subtitle">
+                            <td class="mdl-typography--display-1 mdl-typography--text-right mdl-color-text--white"><br><br>Contaminated<br>Location</td>
+                            <td class="mdl-typography--display-1 mdl-typography--text-left mdl-color-text--white"><br><br>Physiological<br>Effects</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <div class="chemical-card demo-card-wide mdl-card mdl-shadow--2dp" id="heavymetal">
+                                     <div class="mdl-card__title">
+                                        <h2 class="mdl-card__title-text mdl-typography--text-capitalize"></h2>
+                                    </div>
+                                    <h4 class="mdl-typography--text-left mdl-typography--text-capitalize">Heavy metal <small>&copy; Wikipedia</small></h4>
+                                    <div class="mdl-card__supporting-text">Toxic metal<br>Inedible material</div>
+                                    <div class="mdl-card__supporting-text">A toxic heavy metal is any relatively dense metal or metalloid that is noted for its potential toxicity, especially in environmental contexts. The term has particular application to cadmium, mercury, lead and arsenic, all of which appear in the World Health Organisation's list of 10 chemicals of major public concern.</div>
+                                    <div class="mdl-card__supporting-text">Toxic heavy metals are found naturally in the earth, and become concentrated as a result of human caused activities. In humans, heavy metal poisoning is generally treated by the administration of chelating agents. Some elements regarded as heavy metals are essential, in small quantities, for human health.</div>
+                                    <div class="mdl-card__actions mdl-card--border">
+                                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" target="_blank" href="https://en.wikipedia.org/wiki/Toxic_heavy_metal">Learn More</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    
+                    <table class="info">
+                        <tr>
+                            <td class="location">
+                                <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--fab mdl-button--colored" id="bloodjelly-location-taipei"><i class="material-icons">location_on</i></button><br>
+                                <div class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect demo-card-square mdl-card mdl-shadow--2dp" for="bloodjelly-location-taipei" id="bloodjelly-location-taipei-detail">
+                                    <div class="mdl-card__title mdl-card--expand">
+                                        <h2 class="mdl-card__title-text mdl-color-text--accent">Taipei</h2>
+                                    </div>
+                                    <div class="mdl-card__supporting-text"><strong>Shuang-Peng's Contaminated Duck Blood Jelly Has Been Used by 11 Hot Pot Restaurant in New Taipei</strong><br><small>&copy; 2015 Jung-Yu Chi, udn.com</small></div>
+                                    <div class="mdl-card__supporting-text">11 retailers<br>12,000 kilograms</div>
+                                    <div class="mdl-card__actions mdl-card--border">
+                                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="https://video.udn.com/topic/552/278175" target="_blank">Read news</a>
+                                    </div>
+                                </div>
+
+                                <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--fab mdl-button--colored" id="bloodjelly-location-taoyuan"><i class="material-icons">location_on</i></button><br>
+                                <div class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect demo-card-square mdl-card mdl-shadow--2dp" for="bloodjelly-location-taoyuan" id="bloodjelly-location-taoyuan-detail">
+                                    <div class="mdl-card__title mdl-card--expand">
+                                        <h2 class="mdl-card__title-text mdl-color-text--accent">Taoyuan</h2>
+                                    </div>
+                                    <div class="mdl-card__supporting-text"><strong>Scandals about Shuang-Peng's Contaminated Duck Blood Jelly, Checking Is Processed at Traditional Markets and Hypermarkets in Taoyuan</strong><br><small>&copy; 2015 Tseng-Hsun Tseng, udn.com</small></div>
+                                    <div class="mdl-card__supporting-text">27 retailers<br>617 kilograms<br></div>
+                                    <div class="mdl-card__actions mdl-card--border">
+                                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" target="_blank" href="https://video.udn.com/news/278466">Read news</a>
+                                    </div>
+                                </div>
+
+                                <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--fab mdl-button--colored" id="bloodjelly-location-taichung"><i class="material-icons">location_on</i></button><br>
+                                <div class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect demo-card-square mdl-card mdl-shadow--2dp" for="bloodjelly-location-taichung" id="bloodjelly-location-taichung-detail">
+                                    <div class="mdl-card__title mdl-card--expand">
+                                        <h2 class="mdl-card__title-text mdl-color-text--accent">Taichung</h2>
+                                    </div>
+                                    <div class="mdl-card__supporting-text mdl-typography--text-capitalize"><strong>Blood jelly Imported to Restaurant Taichung City Government Has Been Eaten by The Civil Servants</strong><br><small>&copy; 2015 Pei-Chun Lin, udn.com</small></div>
+                                    <div class="mdl-card__supporting-text">159 retailers<br>1,649.97 kilograms</div>
+                                    <div class="mdl-card__actions mdl-card--border">
+                                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="https://video.udn.com/topic/552/279093" target="_blank">Read news</a>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="chemical">
+                                <div id="bloodjelly-effects-dementia-group">
+                                    <div id="bloodjelly-effects-dementia" class="icon mdl-color-text--accent material-icons md-48">gps_fixed</div>
+                                    <div class="tooltip mdl-typography--font-medium" for="bloodjelly-effects-dementia">Dementia</div>
+                                </div>
+                                <div id="bloodjelly-effects-liver-group">
+                                    <div id="bloodjelly-effects-liver" class="icon mdl-color-text--accent material-icons md-48">gps_fixed</div>
+                                    <div class="tooltip mdl-typography--font-medium" for="bloodjelly-effects-liver">Liver cancer</div>
+                                </div>
+                                <div id="bloodjelly-effects-diarrhea-group">
+                                    <div id="bloodjelly-effects-diarrhea" class="icon mdl-color-text--accent material-icons md-48">gps_fixed</div>
+                                    <div class="tooltip mdl-typography--font-medium" for="bloodjelly-effects-diarrhea">Diarrhea</div>
+                                </div>
+                                <div id="bloodjelly-effects-kidney-group">
+                                    <div id="bloodjelly-effects-kidney" class="icon mdl-color-text--accent material-icons md-48">gps_fixed</div>
+                                    <div class="tooltip mdl-typography--font-medium" for="bloodjelly-effects-kidney">Kidney cancer</div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+</div>
+            <!-- Timeline Case #03 Seaweed March -->
+            <div class="section mdl-typography--text-center" id="section4">
+                <div class="slide home">
+                    <div class="mdl-typography--display-2 mdl-color-text--accent mdl-typography--text-lowercase">Case #03</div>
+                    <div class="mdl-typography--display-4 mdl-color-text--white">Seaweed</div>
+                    <div class="mdl-typography--display-1 mdl-color-text--white">March</div>
+                    <div class="case-menu"><a id="moveToCase3Info" href="#"><button class="mdl-button mdl-js-button mdl-color-text--white">See location and effects</button></a></div>
+                </div>
+                <div class="slide">
+                    
+                    <!-- Info title -->
+                    <table class="info-title">
+                        <tr>
+                            <th colspan="2" class="mdl-typography--display-1 mdl-color-text--accent mdl-typography--text-lowercase">Case #03</th>
+                        </tr>
+                        <tr>
+                            <th colspan="2" class="mdl-typography--display-3 mdl-typography--text-center mdl-color-text--white">Seaweed</th>
+                        </tr>
+                        <tr>
+                            <th colspan="2" class="mdl-typography--display-2 mdl-typography--text-center mdl-color-text--white contamination">Contamination</th>
+                        </tr>
+                        <tr class="info-subtitle">
+                            <td class="mdl-typography--display-1 mdl-typography--text-right mdl-color-text--white"><br><br>Contaminated<br>Location</td>
+                            <td class="mdl-typography--display-1 mdl-typography--text-left mdl-color-text--white"><br><br>Physiological<br>Effects</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <!-- chemical card -->
+                                <div class="chemical-card demo-card-wide mdl-card mdl-shadow--2dp" id="ammoniumbicarbonate">
+                                     <div class="mdl-card__title">
+                                        <h2 class="mdl-card__title-text mdl-typography--text-capitalize"></h2>
+                                    </div>
+                                    <h4 class="mdl-typography--text-left mdl-typography--text-capitalize">industrial grade<br>ammonium bicarbonate <small>&copy; Wikipedia</small></h4>
+                                    <div class="mdl-card__supporting-text">Industrvuial additive<br>Leavening agent</div>
+                                    <div class="mdl-card__supporting-text">Ammonium bicarbonate is an inorganic compound with formula (NH<sub>4</sub>)HCO<sub>3</sub>, simplified to NH<sub>5</sub>CO<sub>3</sub>. The compound has many names, reflecting its long history. Chemically speaking, it is the bicarbonate salt of the ammonium ion. It is a colourless solid that degrades readily to carbon dioxide, water and ammonia.</div>
+                                    <div class="mdl-card__actions mdl-card--border">
+                                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="https://en.wikipedia.org/wiki/Ammonium_bicarbonate" target="_blank">Learn More</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    
+                    <table class="info">
+                        <tr>
+                            <td class="location">
+                                <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--fab mdl-button--colored" id="seaweed-location-taichung"><i class="material-icons">location_on</i></button><br>
+                                <div class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect demo-card-square mdl-card mdl-shadow--2dp" for="seaweed-location-taichung" id="seaweed-location-taichung-detail">
+                                    <div class="mdl-card__title mdl-card--expand">
+                                        <h2 class="mdl-card__title-text mdl-color-text--accent">Taichung</h2>
+                                    </div>
+                                    <div class="mdl-card__supporting-text mdl-typography--text-capitalize"><strong>130,000 kilograms contaminated seaweed has been finished at Taichung District</strong><br><small>&copy; 2015 Hsueh-Chien Tseng, Apple Daily</small></div>
+                                    <div class="mdl-card__supporting-text">130,000 kilograms</div>
+                                    <div class="mdl-card__actions mdl-card--border">
+                                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="http://www.appledaily.com.tw/realtimenews/article/new/20150324/580178/" target="_blank">Read news</a>
+                                    </div>
+                                </div>
+
+                                <br>
+                                <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--fab mdl-button--colored" id="seaweed-location-kaohsiung"><i class="material-icons">location_on</i></button><br>
+                                <div class="mdl-menu mdl-menu--top-left mdl-js-menu mdl-js-ripple-effect demo-card-square mdl-card mdl-shadow--2dp" for="seaweed-location-kaohsiung" id="seaweed-location-kaohsiung-detail">
+                                    <div class="mdl-card__title mdl-card--expand">
+                                        <h2 class="mdl-card__title-text mdl-color-text--accent">Kaohsiung</h2>
+                                    </div>
+                                    <div class="mdl-card__supporting-text mdl-typography--text-capitalize"><strong>FDA keeps tracking contaminated seaweed with illegal non food grade ammonium bicarbonate additive</strong><br><small>&copy; 2015 Food and Drug Administration</small></div>
+                                    <div class="mdl-card__supporting-text">49 retailers<br>257.3 kilograms</div>
+                                    <div class="mdl-card__actions mdl-card--border">
+                                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="http://www.fda.gov.tw/TC/newsContent.aspx?id=12255&chk=27f049ff-c08f-46a7-a935-27e30b1d7ae4#.Vfh-VmR97IF" target="_blank">Read news</a>
+                                    </div>
+                                </div>
+
+                                <br>
+                                <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--fab mdl-button--colored" id="seaweed-location-pingtung"><i class="material-icons">location_on</i></button>
+                                <div class="mdl-menu mdl-menu--top-left mdl-js-menu mdl-js-ripple-effect demo-card-square mdl-card mdl-shadow--2dp" for="seaweed-location-pingtung" id="seaweed-location-pingtung-detail">
+                                    <div class="mdl-card__title mdl-card--expand">
+                                        <h2 class="mdl-card__title-text mdl-color-text--accent">Pingtung</h2>
+                                    </div>
+                                    <div class="mdl-card__supporting-text mdl-typography--text-capitalize"><strong>FDA keeps tracking contaminated seaweed with illegal non food grade ammonium bicarbonate additive</strong><br><small>&copy; 2015 Food and Drug Administration</small></div>
+                                    <div class="mdl-card__supporting-text">5,640 kilograms</div>
+                                    <div class="mdl-card__actions mdl-card--border">
+                                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="http://www.fda.gov.tw/TC/newsContent.aspx?id=12255&chk=27f049ff-c08f-46a7-a935-27e30b1d7ae4#.Vfh-VmR97IF" target="_blank">Read news</a>
+                                    </div>
+                                </div>
+
+                            </td>
+                            <td class="chemical">
+                                <div id="seaweed-effects-central-group">
+                                    <div id="seaweed-effects-central" class="icon mdl-color-text--accent material-icons md-48">gps_fixed</div>
+                                    <div class="tooltip mdl-typography--font-medium" for="seaweed-effects-central">Central nervous system disease</div>
+                                </div>
+                                <div id="seaweed-effects-heart-group">
+                                    <div id="seaweed-effects-heart" class="icon mdl-color-text--accent material-icons md-48">gps_fixed</div>
+                                    <div class="tooltip mdl-typography--font-medium" for="seaweed-effects-heart">Heart disease</div>
+                                </div>
+                                <div id="seaweed-effects-liver-group">
+                                    <div id="seaweed-effects-liver" class="icon mdl-color-text--accent material-icons md-48">gps_fixed</div>
+                                    <div class="tooltip mdl-typography--font-medium" for="seaweed-effects-liver">Liver disease</div>
+                                </div>
+                                <div id="seaweed-effects-kidney-group">
+                                    <div id="seaweed-effects-Kidney" class="icon mdl-color-text--accent material-icons md-48">gps_fixed</div>
+                                    <div class="tooltip mdl-typography--font-medium" for="seaweed-effects-kidney">Kidney disease</div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+</div>
+            <!-- Timeline Case #04 Bubble Tea April -->
+            <div class="section mdl-typography--text-center" id="section5">
+                <div class="slide home">
+                    <div class="mdl-typography--display-2 mdl-color-text--accent mdl-typography--text-lowercase">Case #04</div>
+                    <div class="mdl-typography--display-4 mdl-color-text--white">Bubble Tea</div>
+                    <div class="mdl-typography--display-1 mdl-color-text--white">April</div>
+                    <div class="case-menu"><a id="moveToCase4Info" href="#"><button class="mdl-button mdl-js-button mdl-color-text--white">See location and effects</button></a></div>
+                </div>
+                <div class="slide">
+                    
+                    <!-- Info title -->
+                    <table class="info-title">
+                        <tr>
+                            <th colspan="2" class="mdl-typography--display-1 mdl-color-text--accent mdl-typography--text-lowercase">Case #04</th>
+                        </tr>
+                        <tr>
+                            <th colspan="2" class="mdl-typography--display-3 mdl-typography--text-center mdl-color-text--white">Bubble Tea</th>
+                        </tr>
+                        <tr>
+                            <th colspan="2" class="mdl-typography--display-2 mdl-typography--text-center mdl-color-text--white contamination">Contamination</th>
+                        </tr>
+                        <tr class="info-subtitle">
+                            <td class="mdl-typography--display-1 mdl-typography--text-right mdl-color-text--white"><br><br>Contaminated<br>Location</td>
+                            <td class="mdl-typography--display-1 mdl-typography--text-left mdl-color-text--white"><br><br>Physiological<br>Effects</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <!-- chemical card -->
+                                <div class="chemical-card demo-card-wide mdl-card mdl-shadow--2dp" id="fipronil">
+                                    <div class="mdl-card__title">
+                                        <h2 class="mdl-card__title-text mdl-typography--text-capitalize"></h2>
+                                    </div>
+                                    <h4 class="mdl-typography--text-left mdl-typography--text-capitalize">Fipronil <small>&copy; Wikipedia</small></h4>
+                                    <div class="mdl-card__supporting-text">Pesticide<br>Insecticide</div>
+                                    <div class="mdl-card__supporting-text">Fipronil is a broad-use insecticide that belongs to the phenylpyrazole chemical family. Fipronil is a broad-spectrum insecticide that disrupts the insect central nervous system by blocking GABA-gated chloride channels and glutamate-gated chloride (GluCl) channels, resulting in central nervous system toxicity. This causes hyperexcitation of contaminated insects' nerves and muscles. Specificity of fipronil on insects may come from a better efficacy on GABA receptor, but also because GluCl channels do not exist in mammals.</div>
+                                    <div class="mdl-card__actions mdl-card--border">
+                                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="https://en.wikipedia.org/wiki/Fipronil" target="_blank">Learn More</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    
+                    <table class="info">
+                        <tr>
+                            <td class="location">
+
+                                <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--fab mdl-button--colored" id="bubbletea-location-taoyuan"><i class="material-icons">location_on</i></button><br>
+                                <div class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect demo-card-square mdl-card mdl-shadow--2dp" for="bubbletea-location-taoyuan" id="bubbletea-location-taoyuan-detail">
+                                    <div class="mdl-card__title mdl-card--expand">
+                                        <h2 class="mdl-card__title-text mdl-color-text--accent">Taoyuan</h2>
+                                    </div>
+                                    <div class="mdl-card__supporting-text mdl-typography--text-capitalize"><strong>Overusage of Fipronil Found in Green Tea From Sadou Bubble Tea</strong><br><small>&copy; 2015 Lifestyle Centre, ETtoday</small></div>
+                                    <div class="mdl-card__supporting-text">167.4 kilograms</div>
+                                    <div class="mdl-card__actions mdl-card--border">
+                                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="http://www.ettoday.net/news/20150429/499898.htm" target="_blank">Read news</a>
+                                    </div>
+                                </div>
+
+                                <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--fab mdl-button--colored" id="bubbletea-location-taichung"><i class="material-icons">location_on</i></button><br>
+                                <div class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect demo-card-square mdl-card mdl-shadow--2dp" for="bubbletea-location-taichung" id="bubbletea-location-taichung-detail">
+                                    <div class="mdl-card__title mdl-card--expand">
+                                        <h2 class="mdl-card__title-text mdl-color-text--accent">Taichung</h2>
+                                    </div>
+                                    <div class="mdl-card__supporting-text mdl-typography--text-capitalize"><strong>Another 4 shops has detected Fipronil, "340 kilograms has been recycled from Easy Way" said by Taichung Health Bureau</strong><br>&copy; 2015 Local Centre, ETtoday</div>
+                                    <div class="mdl-card__supporting-text">363.3 kilograms</div>
+                                    <div class="mdl-card__actions mdl-card--border">
+                                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="http://www.ettoday.net/news/20150505/502270.htm" target="_blank">Read news</a>
+                                    </div>
+                                </div>
+
+                                <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--fab mdl-button--colored" id="bubbletea-location-tainan"><i class="material-icons">location_on</i></button><br>
+                                <div class="mdl-menu mdl-menu--top-left mdl-js-menu mdl-js-ripple-effect demo-card-square mdl-card mdl-shadow--2dp" for="bubbletea-location-tainan" id="bubbletea-location-tainan-detail">
+                                    <div class="mdl-card__title mdl-card--expand">
+                                        <h2 class="mdl-card__title-text mdl-color-text--accent">Tainan</h2>
+                                    </div>
+                                    <div class="mdl-card__supporting-text mdl-typography--text-capitalize"><strong>Earl Grey From Chun-Chun Kuan in Tainan Has Detected Overusage of Fipronil by over 3.5 times</strong><br>&copy; 2015 Lifestyle Centre, ETtoday</div>
+                                    <div class="mdl-card__supporting-text">189 kilograms</div>
+                                    <div class="mdl-card__actions mdl-card--border">
+                                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="http://www.ettoday.net/news/20150513/505904.htm" target="_blank">Read news</a>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="chemical">
+                                <div id="bubbletea-effects-liver-group">
+                                    <div id="bubbletea-effects-liver" class="icon mdl-color-text--accent material-icons md-48">gps_fixed</div>
+                                    <div class="tooltip mdl-typography--font-medium" for="bubbletea-effects-liver">Liver disease</div>
+                                </div>
+                                <div id="bubbletea-effects-kidney-group">
+                                    <div id="bubbletea-effects-kidney" class="icon mdl-color-text--accent material-icons md-48">gps_fixed</div>
+                                    <div class="tooltip mdl-typography--font-medium" for="bubbletea-effects-kidney">Kidney disease</div>
+                                </div>
+                                <div id="bubbletea-effects-thyroid-group">
+                                    <div id="bubbletea-effects-thyroid" class="icon mdl-color-text--accent material-icons md-48">gps_fixed</div>
+                                    <div class="tooltip mdl-typography--font-medium" for="bubbletea-effects-thyroid">Thyroid cancer</div>
+                                </div>
+                                <div id="bubbletea-effects-infertility-group">
+                                    <div id="bubbletea-effects-infertility" class="icon mdl-color-text--accent material-icons md-48">gps_fixed</div>
+                                    <div class="tooltip mdl-typography--font-medium" for="bubbletea-effects-infertility">Infertility</div>
+                                </div>
+                                <div id="bubbletea-effects-reproductive-group">
+                                    <div id="bubbletea-effects-reproductive" class="icon mdl-color-text--accent material-icons md-48">gps_fixed</div>
+                                    <div class="tooltip mdl-typography--font-medium" for="bubbletea-effects-reproductive">Reproductive cancer</div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+</div>
+            <!-- Timeline Case #05 Candied Fruit May -->
+            <div class="section mdl-typography--text-center" id="section6">
+                <div class="slide home">
+                    <div class="mdl-typography--display-2 mdl-color-text--accent mdl-typography--text-lowercase">Case #05</div>
+                    <div class="mdl-typography--display-4 mdl-color-text--white">Candied Fruit</div>
+                    <div class="mdl-typography--display-1 mdl-color-text--white">May</div>
+                    <div class="case-menu"><a id="moveToCase5Info" href="#"><button class="mdl-button mdl-js-button mdl-color-text--white">See location and effects</button></a></div>
+                </div>
+                <div class="slide">
+                    
+                    <!-- Info title -->
+                    <table class="info-title">
+                        <tr>
+                            <th colspan="2" class="mdl-typography--display-1 mdl-color-text--accent mdl-typography--text-lowercase">Case #05</th>
+                        </tr>
+                        <tr>
+                            <th colspan="2" class="mdl-typography--display-3 mdl-typography--text-center mdl-color-text--white">Candied Fruit</th>
+                        </tr>
+                        <tr>
+                            <th colspan="2" class="mdl-typography--display-2 mdl-typography--text-center mdl-color-text--white contamination">Contamination</th>
+                        </tr>
+                        <tr class="info-subtitle">
+                            <td class="mdl-typography--display-1 mdl-typography--text-right mdl-color-text--white"><br><br>Contaminated<br>Location</td>
+                            <td class="mdl-typography--display-1 mdl-typography--text-left mdl-color-text--white"><br><br>Physiological<br>Effects</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <!-- chemical card -->
+                                <div class="chemical-card demo-card-wide mdl-card mdl-shadow--2dp" id="sodiummetabisulfite">
+                                    <div class="mdl-card__title">
+                                        <h2 class="mdl-card__title-text mdl-typography--text-capitalize"></h2>
+                                    </div>
+                                    <h4 class="mdl-typography--text-left mdl-typography--text-capitalize">Sodium metabisulfite <small>&copy; Wikipedia</small></h4>
+                                    <div class="mdl-card__supporting-text">Industrial bleach</div>
+                                    <div class="mdl-card__supporting-text">Sodium metabisulfite or sodium pyrosulfite is an inorganic compound of chemical formula Na<sub>2</sub>S<sub>2</sub>O<sub>5</sub>. The substance is sometimes referred to as disodium (metabisulfite). It is used as a disinfectant, antioxidant and preservative agent.</div>
+                                    <div class="mdl-card__actions mdl-card--border">
+                                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="https://en.wikipedia.org/wiki/Sodium_metabisulfite" target="_blank">Learn More</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    
+                    <table class="info">
+                        <tr>
+                            <td class="location">
+                                <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--fab mdl-button--colored" id="candiedfruit-location-changhua"><i class="material-icons">location_on</i></button><br>
+                                <div class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect demo-card-square mdl-card mdl-shadow--2dp" for="candiedfruit-location-changhua" id="candiedfruit-location-changhua-detail">
+                                    <div class="mdl-card__title mdl-card--expand">
+                                        <h2 class="mdl-card__title-text mdl-color-text--accent">Changhua</h2>
+                                    </div>
+                                    <div class="mdl-card__supporting-text mdl-typography--text-capitalize"><strong>207 Tons of Contaminated Candied Fruit Has Been Sampled</strong><br>&copy; 2015 Hui-Chen Teng, Apple Daily</div>
+                                    <div class="mdl-card__supporting-text">207,000 kilograms</div>
+                                    <div class="mdl-card__actions mdl-card--border">
+                                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="http://www.appledaily.com.tw/appledaily/article/headline/20150522/36564816/" target="_blank">Read news</a>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="chemical">
+                                <div id="candiedfruit-effects-liver-group">
+                                    <div id="candiedfruit-effects-liver" class="icon mdl-color-text--accent material-icons md-48">gps_fixed</div>
+                                    <div class="tooltip mdl-typography--font-medium" for="candiedfruit-effects-liver">Liver cancer</div>
+                                </div>
+                                <div id="candiedfruit-effects-kidney-group">
+                                    <div id="candiedfruit-effects-kidney" class="icon mdl-color-text--accent material-icons md-48">gps_fixed</div>
+                                    <div class="tooltip mdl-typography--font-medium" for="candiedfruit-effects-kidney">Kidney cancer</div>
+                                </div>
+                                <div id="candiedfruit-effects-diarrhea-group">
+                                    <div id="candiedfruit-effects-diarrhea" class="icon mdl-color-text--accent material-icons md-48">gps_fixed</div>
+                                    <div class="tooltip mdl-typography--font-medium" for="candiedfruit-effects-diarrhea">Diarrhea</div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!-- Designer -->
+            <div class="section mdl-typography--text-left" id="section7">
+            	<div class="content">
+                    <table>
+                        <tr>
+                            <td>
+                                <div class="demo-card-image mdl-card mdl-shadow--2dp">
+                                    <div class="mdl-card__title mdl-card--expand"></div>
+                                    <div class="mdl-card__actions">
+                                        <span class="demo-card-image__filename"></span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="demo-card-wide mdl-card mdl-shadow--2dp mdl-cell--12-col">
+                                    <div class="mdl-card__title">
+                                        <h2 class="mdl-card__title-text">Designer's Message</h2>
+                                    </div>
+                                    <div class="mdl-card__supporting-text">There are a huge record of food safety scandal in Taiwan recently. It happens nearly every month. However, even though most Taiwanese people really care about eating healthy, it is still hardly seen a drameticly decrease on the scandal presented month by month. It hardly seen people in Taiwan do not really understand and take care on what food they have around.</div>
+                                    <div class="mdl-card__supporting-text">This project is to influence people living in Taiwan to emphasize the danger of contaminated food through the past lessons. The project is to deliever an interactive multimedia solution. It will be presented as an interactive website for Taiwanese people to explore and experience the contaminated food scandals happening recently in Taiwan.</div>
+                                    <div class="name mdl-card__actions mdl-card--border mdl-typography--text-right">
+                                        <div class="mdl-typography--title">Sheng-Che Lin (Jerry)</div>
+                                        <div class="mdl-typography--body-1">Master of Multimedia Design<br>Monash University</div>
+                                    </div>
+                                    <div class="mdl-card__menu">
+                                        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                                            <a href="mailto:slin65@student.monash.edu" target="_top"><i class="material-icons">mail</i></a>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+				</div>
+            </div>
+            
+            <!-- Resources and Credit -->
+            <div class="section mdl-typography--text-center" id="section8">
+                <div class="mdl-typography--display-2 mdl-typography--text-left mdl-color-text--white">Resources and Credit</div><br>
+                <div class="content">
+                    <div class="mdl-typography--body-1 mdl-typography--text-left mdl-color-text--white"><strong>Apple Daily</strong></div>
+                    <ul class="mdl-typography--body-1 mdl-typography--text-left mdl-color-text--white">
+                        <li><a class="mdl-typography--text-capitalize" href="http://www.appledaily.com.tw/realtimenews/article/new/20150124/548200/" target="_blank">Methyl yellow Has been detected, 41,249 fermented tofu has been recycled from the shop Cheng-Ta-Hsiang</a></li>
+                        <li><a class="mdl-typography--text-capitalize" href="http://www.appledaily.com.tw/realtimenews/article/new/20150324/580178/" target="_blank">130,000 kilograms contaminated seaweed has been finished at Taichung District</a></li>
+                        <li><a class="mdl-typography--text-capitalize" href="http://www.appledaily.com.tw/appledaily/article/headline/20150522/36564816/" target="_blank">207 Tons of Contaminated Candied Fruit Has Been Sampled</a></li>
+                    </ul>
+                    <div class="mdl-typography--body-1 mdl-typography--text-left mdl-color-text--white"><strong>Álvaro Trigo</strong></div>
+                    <ul class="mdl-typography--body-1 mdl-typography--text-left mdl-color-text--white">
+                        <li><a class="mdl-typography--text-lowercase" href="http://alvarotrigo.com/fullPage/" target="_blank">fullPage.js</a></li>
+                    </ul>
+                    <div class="mdl-typography--body-1 mdl-typography--text-left mdl-color-text--white"><strong>ETtoday</strong></div>
+                    <ul class="mdl-typography--body-1 mdl-typography--text-left mdl-color-text--white">
+                        <li><a class="mdl-typography--text-capitalize" href="http://www.ettoday.net/news/20150429/499898.htm" target="_blank">Overusage of Fipronil Found in Green Tea From Sadou Bubble Tea</a></li>
+                        <li><a class="mdl-typography--text-capitalize" href="http://www.ettoday.net/news/20150505/502270.htm"target="_blank">Another 4 shops has detected Fipronil, "340 kilograms has been recycled from Easy Way" said by Taichung Health Bureau</a></li>
+                        <li><a class="mdl-typography--text-capitalize" href="http://www.ettoday.net/news/20150513/505904.htm" target="_blank">Earl Grey From Chun-Chun Kuan in Tainan Has Detected Overusage of Fipronil by over 3.5 times</a></li>
+                    </ul>
+                    
+                    <div class="mdl-typography--body-1 mdl-typography--text-left mdl-color-text--white"><strong>Food and Drug Administration</strong></div>
+                    <ul class="mdl-typography--body-1 mdl-typography--text-left mdl-color-text--white">
+                        <li><a class="mdl-typography--text-capitalize" href="http://www.fda.gov.tw/TC/newsContent.aspx?id=12255&chk=27f049ff-c08f-46a7-a935-27e30b1d7ae4#.Vfh-VmR97IF" target="_blank">FDA keeps tracking contaminated seaweed with illegal non food grade ammonium bicarbonate additive</a></li>
+                    </ul>
+                    
+                    <div class="mdl-typography--body-1 mdl-typography--text-left mdl-color-text--white"><strong>Gerd Altmann (Pixabay username: geralt)</strong></div>
+                    <ul class="mdl-typography--body-1 mdl-typography--text-left mdl-color-text--white">
+                        <li><a class="mdl-typography--text-capitalize" href="https://pixabay.com/en/family-mother-children-boy-76786/" target="_blank">Family, Mother, Children, Boy</a></li>
+                        <li><a class="mdl-typography--text-capitalize" href="https://pixabay.com/en/man-woman-businessmen-economy-76202/" target="_blank">Man, Woman, Businessmen, Economy</a></li>
+                    </ul>
+                    
+                    <div class="mdl-typography--body-1 mdl-typography--text-left mdl-color-text--white"><strong>Google</strong></div>
+                    <ul class="mdl-typography--body-1 mdl-typography--text-left mdl-color-text--white">
+                        <li><a class="mdl-typography--text-capitalize" href="https://www.google.com/design/spec" target="_blank">Google design guidelines</a></li>
+                        <li><a class="mdl-typography--text-capitalize" href="http://www.getmdl.io" target="_blank">Material design lite</a></li>
+                    </ul>
+                    
+                    <div class="mdl-typography--body-1 mdl-typography--text-left mdl-color-text--white"><strong>hANjAN STUDIO</strong></div>
+                    <ul class="mdl-typography--body-1 mdl-typography--text-left mdl-color-text--white">
+                        <li><a class="mdl-typography--text-capitalize" href="http://www.eion.com.tw/Blogger/?Pid=1030" target="_blank">Taiwan Map Vector Graphics</a></li>
+                    </ul>
+                    
+                    <div class="mdl-typography--body-1 mdl-typography--text-left mdl-color-text--white"><strong>Nownews Network</strong></div>
+                    <ul class="mdl-typography--body-1 mdl-typography--text-left mdl-color-text--white">
+                        <li><a class="mdl-typography--text-capitalize" href="http://www.nownews.com/n/2015/01/21/1582298" target="_blank">The Same OEM! New Update For Contaminated Fermented Tofu</a></li>
+                    </ul>
+                    <div class="mdl-typography--body-1 mdl-typography--text-left mdl-color-text--white"><strong>Silvia (Pixabay username: sipa)</strong></div>
+                    <ul class="mdl-typography--body-1 mdl-typography--text-left mdl-color-text--white">
+                        <li><a class="mdl-typography--text-capitalize" href="https://pixabay.com/en/man-run-runners-race-sporty-human-1001591/" target="_blank">Man, Run, Runners Race, Sporty, Human</a></li>
+                    </ul>
+                    <div class="mdl-typography--body-1 mdl-typography--text-left mdl-color-text--white"><strong>udn.com</strong></div>
+                    <ul class="mdl-typography--body-1 mdl-typography--text-left mdl-color-text--white">
+                        <li><a class="mdl-typography--text-capitalize" href="https://video.udn.com/news/278466" target="_blank">Scandals about Shuang-Peng's Contaminated Duck Blood Jelly, Checking Is Processed at Traditional Markets and Hypermarkets in Taoyuan</a></li>
+                        <li><a class="mdl-typography--text-capitalize" href="https://video.udn.com/topic/552/278175" target="_blank">Shuang-Peng's Contaminated Duck Blood Jelly Has Been Used by 11 Hot Pot Restaurant in New Taipei</a></li>
+                        <li><a class="mdl-typography--text-capitalize" href="https://video.udn.com/topic/552/279093" target="_blank">Blood jelly Imported to Restaurant Taichung City Government Has Been Eaten by The Civil Servants</a></li>
+                    </ul>
+                    <div class="mdl-typography--body-1 mdl-typography--text-left mdl-color-text--white"><strong>Unkown (Pixabay username: OpenClipartVectors)</strong></div>
+                    <ul class="mdl-typography--body-1 mdl-typography--text-left mdl-color-text--white">
+                        <li><a class="mdl-typography--text-capitalize"
+                               href="https://pixabay.com/en/divorce-parents-child-people-156444/"
+                               target="_blank">Divorce, Parents, Child, People</a></li>
+                    </ul>
+                    
+                    <div class="mdl-typography--body-1 mdl-typography--text-left mdl-color-text--white"><strong>Wikipedia</strong></div>
+                    <ul class="mdl-typography--body-1 mdl-typography--text-left mdl-color-text--white">
+                        <li><a class="mdl-typography--text-capitalize"
+                               href="https://en.wikipedia.org/wiki/Ammonium_bicarbonate"
+                               target="_blank">Ammonium bicarbonate</a></li>
+                        <li><a class="mdl-typography--text-capitalize"
+                               href="https://en.wikipedia.org/wiki/Fipronil"
+                               target="_blank">Fipronil</a></li>
+                        <li><a class="mdl-typography--text-capitalize"
+                               href="https://en.wikipedia.org/wiki/Toxic_heavy_metal"
+                               target="_blank">Heavy metal</a></li>
+                        <li><a class="mdl-typography--text-capitalize"
+                               href="https://en.wikipedia.org/wiki/Methyl_yellow"
+                               target="_blank">Methyl yellow</a></li>
+                        <li><a class="mdl-typography--text-capitalize"
+                               href="https://en.wikipedia.org/wiki/Sodium_metabisulfite"
+                               target="_blank">Sodium metabisulfite</a></li>
+                    </ul>
+                    <div class="thanks mdl-typography--subhead mdl-typography--text-left mdl-color-text--white" id="thanks">Special thanks to <strong>Jeffery Janet</strong> and <strong>Tamara Jordan</strong> for assistant.</div>
+                    <div class="thanks mdl-typography--caption mdl-typography--text-left mdl-color-text--white">All references and resources are used and modified for educational purpose.</div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

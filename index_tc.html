@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>２０１５年在台灣的黑心食品事件集</title>
+        <meta name="author" content="林聖哲（Jerry）" />
+        <meta name="description" content="Do You Really Know What You Are Eating?" />
+        <meta name="keywords"  content="" />
+        <meta name="Resource-type" content="Document" />
+        
+        <!-- jQuery -->
+        <script type="text/javascript" src="vendors/jquery.slimscroll.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+        
+        <!-- Material icons -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        
+        <!-- Material Design Lite -->
+        <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.grey-red.min.css" />
+        <link rel="stylesheet" href="mdl/material.grey-red.min.css" />
+        <script src="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.min.js"></script>
+        <script type="text/javascript" src="mdl/material.min.js"></script>
+        
+        <!-- fullPage.js-->
+        <script type="text/javascript" src="jquery.fullPage.js"></script>
+        <link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
+        
+        <!-- Customise -->
+        <link rel="stylesheet" href="style.css">
+        <script type="text/javascript">
+         $(document).ready(function() {
+
+                function initialization(){
+                    $('#myContainer').fullpage({
+                        sectionsColor: ['#212121', '#212121', '#B71C1C', '#3E2723', '#1B5E20', '#F57F17', '#BF360C', '#212121', '#212121' ],
+                        anchors: ['pagetop', 'pagetimeline', 'pagecase1', 'pagecase2', 'pagecase3', 'pagecase4', 'pagecase5', 'pagedesigner', 'pagecredit'],
+                        resize: false,
+                        animateAnchor:false,
+                        scrollOverflow: true,
+                        autoScrolling:true,
+                        responsive: 900,
+                        fitSection: false,
+                        menu: '#menu',
+                        navigation:true,
+                        continuousVertical:true,
+                        //paddingTop: '20px',
+                        css3: true,
+                        onLeave: function(index, nextIndex, direction){
+                            console.log("onLeave--" + "index: " + index + " nextIndex: " + nextIndex + " direction: " +  direction);
+                        },
+                        afterLoad: function(anchorLink, index){
+                            console.log("afterLoad--" + "anchorLink: " + anchorLink + " index: " + index );
+                        },
+                        afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){
+                            console.log("afterSlideLoad--" + "anchorLink: " + anchorLink + " index: " + index + " slideAnchor: " + slideAnchor + " slideIndex: " + slideIndex);
+                        },
+                        onSlideLeave: function(anchorLink, index, slideIndex, direction){
+                            console.log("onSlideLeave--" + "anchorLink: " + anchorLink + " index: " + index + " slideIndex: " + slideIndex + " direction: " + direction);
+                        },
+                        afterRender: function(){
+                            console.log("afterRender");
+                        },
+                        afterResize: function(){
+                            console.log("afterResize");
+                        }
+                    });
+                }
+
+                //fullPage.js initialization
+                initialization();
+
+
+                $('#moveSectionUp').click(function(e){
+                    e.preventDefault();
+                    $.fn.fullpage.moveSectionUp();
+                });
+
+                $('#moveSectionDown').click(function(e){
+                    e.preventDefault();
+                    $.fn.fullpage.moveSectionDown();
+                });
+
+                $('#moveTo').click(function(e){
+                    e.preventDefault();
+                    $.fn.fullpage.moveTo(2, 3);
+                });
+
+                $('#moveToTop').click(function(e){
+                    e.preventDefault();
+                    $.fn.fullpage.moveTo(2);
+                });
+
+                $('#moveToCase1').click(function(e){
+                    e.preventDefault();
+                    $.fn.fullpage.moveTo(3, 0);
+                });
+
+                $('#moveToCase1Info').click(function(e){
+                    e.preventDefault();
+                    $.fn.fullpage.moveTo(3, 1);
+                });
+
+                $('#moveToCase2').click(function(e){
+                    e.preventDefault();
+                    $.fn.fullpage.moveTo(4, 0);
+                });
+
+                $('#moveToCase2Info').click(function(e){
+                    e.preventDefault();
+                    $.fn.fullpage.moveTo(4, 1);
+                });
+
+                $('#moveToCase3').click(function(e){
+                    e.preventDefault();
+                    $.fn.fullpage.moveTo(5, 0);
+                });
+
+                $('#moveToCase3Info').click(function(e){
+                    e.preventDefault();
+                    $.fn.fullpage.moveTo(5, 1);
+                });
+
+                $('#moveToCase4').click(function(e){
+                    e.preventDefault();
+                    $.fn.fullpage.moveTo(6, 0);
+                });
+
+                $('#moveToCase4Info').click(function(e){
+                    e.preventDefault();
+                    $.fn.fullpage.moveTo(6, 1);
+                });
+
+                $('#moveToCase5').click(function(e){
+                    e.preventDefault();
+                    $.fn.fullpage.moveTo(7, 0);
+                });
+
+                $('#moveToCase5Info').click(function(e){
+                    e.preventDefault();
+                    $.fn.fullpage.moveTo(7, 1);
+                });
+
+                $('#silentMoveTo').click(function(e){
+                    e.preventDefault();
+                    $.fn.fullpage.silentMoveTo(2);
+                });
+
+                $('#silentMoveToSlide').click(function(e){
+                    e.preventDefault();
+                    $.fn.fullpage.silentMoveTo(2, 3);
+                });
+
+                $('#moveSlideRight').click(function(e){
+                    e.preventDefault();
+                    $.fn.fullpage.moveSlideRight();
+                });
+
+                $('#moveSlideLeft').click(function(e){
+                    e.preventDefault();
+                    $.fn.fullpage.moveSlideLeft();
+                });
+            });
+        </script>
+
+        <style>
+
+            /* Overwriting styles for control arrows for slides
+            * --------------------------------------- */
+            .fp-controlArrow.fp-prev {
+                left: 8px;
+            }
+            .fp-controlArrow.fp-next{
+                right: 8px;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div class="demo-layout-transparent mdl-layout mdl-js-layout">
+            <!-- Header -->
+            <header class="mdl-layout__header mdl-layout__header--transparent">
+                <div class="mdl-layout__header-row">
+                    <!-- Title -->
+                    <span class="mdl-layout-title"> </span>
+                    <!-- Add spacer, to align navigation to the right -->
+                    <div class="mdl-layout-spacer"></div>
+                    <!-- Navigation -->
+                    <nav class="mdl-navigation">
+                        <a class="mdl-navigation__link" href=""> </a>
+                    </nav>
+                    <button id="language" class="mdl-button mdl-js-button mdl-button--icon material-icons md-light md-48">language</button>
+
+                    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+                        for="language">
+                        <a class="mdl-menu__item" href="index_en.html"><li>English</li></a>
+                        <a class="mdl-menu__item" href="index_tc.html"><li>中文（繁體）</li></a>
+                    </ul>
+                </div>
+</header>
+            <!-- Footer -->
+            <footer class="mdl-mini-footer">
+                <div class="mdl-mini-footer__left-section">
+                    <div class="mdl-logo"><a href="#pagetop">２０１５年台灣黑心食品事件</a></div>
+                    <ul class="mdl-mini-footer__link-list">
+                        <li><a href="#pagedesigner">來自設計師的訊息</a></li>
+                        <li><a href="#pagecredit">資料來源與聲明</a></li>
+                    </ul>
+                </div>
+</footer>
+            <!-- Drawer -->
+            <div class="mdl-layout__drawer">
+                <a class="mdl-layout-title" style="color: #FFFFFF; padding-bottom: 64px; background-color: #000;" href="#pagetop"><span class="mdl-layout-title">２０１５年<br>在台灣的<br>黑心食品事件集</span></a>
+                <nav class="mdl-navigation">
+                    <a class="mdl-navigation__link" href="#pagetimeline">事件時間軸</a>
+                    <a class="mdl-navigation__link" href="#pagecase1">事件＃０１<br>豆腐乳　一月份</a>
+                    <a class="mdl-navigation__link" href="#pagecase2">事件＃０2<br>鴨血　二月份</a>
+                    <a class="mdl-navigation__link" href="#pagecase3">事件＃０3<br>海帶　三月份</a>
+                    <a class="mdl-navigation__link" href="#pagecase4">事件＃０4<br>手搖飲料　四月份</a>
+                    <a class="mdl-navigation__link" href="#pagecase5">事件＃０5<br>罐頭水果　五月份</a>
+                    <a class="mdl-navigation__link" href="#pagedesigner">來自設計師的話</a>
+                    <a class="mdl-navigation__link" href="#pagecredit">資料來源與聲明</a>
+                </nav>
+            </div>
+            <!-- "Go to top button -->
+            <a id="moveToTop" href="#"><button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored"><i class="material-icons">view_carousel</i></button></a> 
+        </div>
+
+        <div id="myContainer">
+            <!-- Top page -->
+            <div class="section" id="section0">
+            	<div class="content">
+                    <div class="mdl-typography--display-4 mdl-typography--text-uppercase mdl-color-text--white mdl-typography--font-black" id="title">２０１５年<br>在台灣的<br>黑心食品事件集</div>
+                    <div class="mdl-typography--display-2 mdl-color-text--grey-500 mdl-typography--text-right">你真的知道你正在吃的是什麼嗎？</div>
+                    <div class="mdl-typography--display-1 mdl-color-text--grey-700 mdl-typography--text-right">從事件時間軸了解近期的事件</div>
+                    <div class="mdl-typography--text-right"><a id="moveSectionDown" href="#"><i class="material-icons md-144">keyboard_arrow_down</i></a></div>
+                </div>
+            </div>
+
+            <!-- Timeline -->
+            <div class="section" id="section1">
+                <div id="timeline-menu">
+                    <div id="timeline-menu-01">
+                        <div class="timeline-menu-content">
+                            <div class="mdl-typography--display-1 mdl-typography--text-center mdl-color-text--accent mdl-typography--font-light mdl-typography--text-lowercase">事件＃０１</div>
+                            <div class="mdl-typography--display-2 mdl-typography--text-center mdl-color-text--white">豆腐乳</div>
+                            <div class="mdl-typography--headline-color-contrast mdl-typography--text-center mdl-color-text--primary">一月份</div>
+                            <div class="mdl-typography--text-center"><a id="moveToCase1" href="#"><button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored"><i class="material-icons">arrow_forward</i></button></a></div>
+                        </div>
+                    </div>
+                    <div id="timeline-menu-02">
+                        <div class="timeline-menu-content">
+                            <div class="mdl-typography--display-1 mdl-typography--text-center mdl-color-text--accent mdl-typography--font-light mdl-typography--text-lowercase">事件＃０２</div>
+                            <div class="mdl-typography--display-2 mdl-typography--text-center mdl-color-text--white">鴨血</div>
+                            <div class="mdl-typography--headline-color-contrast mdl-typography--text-center mdl-color-text--primary">二月份</div>
+                            <div class="mdl-typography--text-center"><a id="moveToCase2" href="#"><button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored"><i class="material-icons">arrow_forward</i></button></a></div>
+                        </div>
+                    </div>
+                    <div id="timeline-menu-03">
+                        <div class="timeline-menu-content">
+                            <div class="mdl-typography--text-center mdl-typography--display-1 mdl-color-text--accent mdl-typography--font-light mdl-typography--text-lowercase">事件＃０３</div>
+                            <div class="mdl-typography--text-center mdl-typography--display-2 mdl-color-text--white">海帶</div>
+                            <div class="mdl-typography--text-center mdl-typography--headline-color-contrast mdl-color-text--primary">三月份</div>
+                            <div class="mdl-typography--text-center"><a id="moveToCase3" href="#"><button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored"><i class="material-icons">arrow_forward</i></button></a></div>
+                        </div>
+                    </div>
+                    <div id="timeline-menu-04">
+                        <div class="timeline-menu-content">
+                            <div class="mdl-typography--text-center mdl-typography--display-1 mdl-color-text--accent mdl-typography--font-light mdl-typography--text-lowercase">事件＃０４</div>
+                            <div class="mdl-typography--text-center mdl-typography--display-2 mdl-color-text--white">手搖飲料</div>
+                            <div class="mdl-typography--text-center mdl-typography--headline-color-contrast mdl-color-text--primary">四月份</div>
+                            <div class="mdl-typography--text-center"><a id="moveToCase4" href="#"><button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored"><i class="material-icons">arrow_forward</i></button></a></div>
+                        </div>
+                    </div>
+                    <div id="timeline-menu-05">
+                        <div class="timeline-menu-content">
+                            <div class="mdl-typography--text-center mdl-typography--display-1 mdl-color-text--accent mdl-typography--font-light mdl-typography--text-lowercase">事件＃０５</div>
+                            <div class="mdl-typography--text-center mdl-typography--display-2 mdl-color-text--white">罐頭水果</div>
+                            <div class="mdl-typography--text-center mdl-typography--headline-color-contrast mdl-color-text--primary">五月份</div>
+                            <div class="mdl-typography--text-center"><a id="moveToCase5" href="#"><button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored"><i class="material-icons">arrow_forward</i></button></a></div>
+                        </div>
+                    </div>
+                </div>
+</div>
+            
+            <!-- Timeline Case #01 Fermented Tofu January -->
+            <div class="section mdl-typography--text-center" id="section2">
+                <div class="slide home">
+                    <div class="mdl-typography--display-2 mdl-color-text--accent mdl-typography--text-lowercase">事件＃０１</div>
+                    <div class="mdl-typography--display-4 mdl-color-text--white">豆腐乳</div>
+                    <div class="mdl-typography--display-1 mdl-color-text--white">一月份</div>
+                    <div class="case-menu"><a id="moveToCase1Info" href="#"><button class="mdl-button mdl-js-button mdl-color-text--white">了解事發地點及影響</button></a></div>
+                </div>
+                
+                <div class="slide">
+                    
+                    <!-- info title -->
+                    <table class="info-title">
+                        <tr>
+                            <th colspan="2" class="mdl-typography--display-1-color-contrast mdl-typography--text-center mdl-color-text--accent mdl-typography--text-lowercase">事件＃０１</th>
+                        </tr>
+                        <tr>
+                            <th colspan="2" class="mdl-typography--display-3 mdl-typography--text-center mdl-color-text--white">豆腐乳</th>
+                        </tr>
+                        <tr>
+                            <th colspan="2" class="mdl-typography--display-2 mdl-typography--text-center mdl-color-text--white contamination">黑心食品</th>
+                        </tr>
+                        <tr class="info-subtitle">
+                            <td class="mdl-typography--display-1 mdl-typography--text-right mdl-color-text--white"><br><br>事發地區</td>
+                            <td class="mdl-typography--display-1 mdl-typography--text-left mdl-color-text--white"><br><br>身理影響</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <!-- chemical card -->
+                                <div class="chemical-card demo-card-wide mdl-card mdl-shadow--2dp" id="methylyellow">
+                                     <div class="mdl-card__title">
+                                        <h2 class="mdl-card__title-text mdl-typography--text-capitalize"></h2>
+                                    </div>
+                                    <h4 class="mdl-typography--text-left mdl-typography--text-capitalize">甲基黃 <small>&copy; 維基百科</small></h4>
+                                    <div class="mdl-card__supporting-text">甲基黃（又稱二甲基黃）是一種酸鹼指示劑、工業用油溶性染色劑。</div>
+                                    <div class="mdl-card__supporting-text">甲基黃本身為鹼性，變色範圍為pH值2.8~4.0。在酸性環境中呈紅色，在鹼性環境中呈黃色。每10L試液，用1滴甲基黃即可。</div>
+                                    <div class="mdl-card__supporting-text">遇高溫、明火或與氧化及接觸有燃燒的危險。受熱分解放出有毒煙氣。經呼吸道、消化道、皮膚進入體內，可導致鐵血紅蛋白症、紫紺，嚴重時可致死。</div>
+                                    <div class="mdl-card__supporting-text">甲基黃是可疑人類致癌物，國際癌症研究中心已將其列入第2B類致癌物質。</div>
+                                    <div class="mdl-card__actions mdl-card--border">
+                                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" target="_blank" href="https://zh.wikipedia.org/wiki/%E7%94%B2%E5%9F%BA%E9%BB%84">Learn more</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    
+                    <table class="info">
+                        <tr>
+                            <td class="location">
+                                <!-- location cards -->
+                                <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--fab mdl-button--colored" id="tofu-location-taipei"><i class="material-icons">location_on</i></button><br>
+                                <div class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect demo-card-square mdl-card mdl-shadow--2dp" for="tofu-location-taipei" id="tofu-location-taipei-detail">
+                                    <div class="mdl-card__title mdl-card--expand">
+                                        <h2 class="mdl-card__title-text mdl-color-text--accent">台北</h2>
+                                    </div>
+                                    <div class="mdl-card__supporting-text mdl-typography--text-capitalize"><strong>同廠代工！毒腐乳再爆　度小月紅麴豆腐乳也中</strong><br><small>&copy; 2015 陳鈞凱　今日傳媒</small></div>
+                                    <div class="mdl-card__supporting-text">2 項產品<br>568 件物件<br>170.4 公斤</div>
+                                    <div class="mdl-card__actions mdl-card--border">
+                                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="http://www.nownews.com/n/2015/01/21/1582298" target="_blank">閱讀新聞</a>
+                                    </div>
+                                </div>
+                                <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--fab mdl-button--colored" id="tofu-location-taichung"><i class="material-icons">location_on</i></button>
+                                <div class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect demo-card-square mdl-card mdl-shadow--2dp" for="tofu-location-taichung" id="tofu-location-taichung-detail">
+                                    <div class="mdl-card__title mdl-card--expand">
+                                        <h2 class="mdl-card__title-text mdl-color-text--accent">台中</h2>
+                                    </div>
+                                    <div class="mdl-card__supporting-text mdl-typography--text-capitalize"><strong>驗出二甲基黃　「正大香」腐乳回收41249瓶</strong><br><small>&copy; 2015 楊勝裕 蘋果日報</small></div>
+                                    <div class="mdl-card__supporting-text">6 項產品<br>41,249 件物件</div>
+                                    <div class="mdl-card__actions mdl-card--border">
+                                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="http://www.appledaily.com.tw/realtimenews/article/new/20150124/548200/" target="_blank">閱讀新聞</a>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="chemical">
+                                <!-- chemical effects -->
+                                <div id="tofu-effects-lung-group">
+                                    <div id="tofu-effects-lung" class="icon material-icons mdl-color-text--accent md-48">gps_fixed</div>
+                                    <div class="tooltip mdl-typography--font-medium" for="tofu-effects-lung">肺癌</div>
+                                </div>
+                                <div id="tofu-effects-liver-group">
+                                    <div id="tofu-effects-liver" class="icon mdl-color-text--accent material-icons md-48">gps_fixed</div>
+                                    <div class="tooltip mdl-typography--font-medium" for="tofu-effects-liver">肝癌</div>
+                                </div>
+                                <div id="tofu-effects-bladder-group">
+                                    <div id="tofu-effects-bladder" class="icon mdl-color-text--accent material-icons md-48">gps_fixed</div>
+                                    <div class="tooltip mdl-typography--font-medium" for="tofu-effects-bladder">膀胱癌</div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+</div>
+            <!-- Timeline Case #02 Blood Jelly February -->
+            <div class="section mdl-typography--text-center" id="section3">
+                
+                <div class="slide home">
+                    <div class="mdl-typography--display-2 mdl-color-text--accent mdl-typography--text-lowercase">事件＃０２</div>
+                    <div class="mdl-typography--display-4 mdl-color-text--white mdl-typography--text-capitalize">鴨血</div>
+                    <div class="mdl-typography--display-1 mdl-color-text--white mdl-typography--text-capitalize">二月份</div>
+                    <div class="case-menu"><a id="moveToCase2Info" href="#"><button class="mdl-button mdl-js-button mdl-color-text--white">了解事發地點及影響</button></a></div>
+                </div>
+                <div class="slide">
+                    <!-- Info title -->
+                    <table class="info-title">
+                        <tr>
+                            <th colspan="2" class="mdl-typography--display-1-color-contrast mdl-typography--text-center mdl-color-text--accent mdl-typography--text-lowercase">事件＃０２</th>
+                        </tr>
+                        <tr>
+                            <th colspan="2" class="mdl-typography--display-3 mdl-typography--text-center mdl-color-text--white">鴨血</th>
+                        </tr>
+                        <tr>
+                            <th colspan="2" class="mdl-typography--display-2 mdl-typography--text-center mdl-color-text--white contamination">黑心食品</th>
+                        </tr>
+                        <tr class="info-subtitle">
+                            <td class="mdl-typography--display-1 mdl-typography--text-right mdl-color-text--white"><br><br>事發地區</td>
+                            <td class="mdl-typography--display-1 mdl-typography--text-left mdl-color-text--white"><br><br>身理影響</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <div class="chemical-card demo-card-wide mdl-card mdl-shadow--2dp" id="heavymetal">
+                                     <div class="mdl-card__title">
+                                        <h2 class="mdl-card__title-text mdl-typography--text-capitalize"></h2>
+                                    </div>
+                                    <h4 class="mdl-typography--text-left mdl-typography--text-capitalize">重金屬 <small>&copy; 維基百科</small></h4>
+                                    <div class="mdl-card__supporting-text">在環境污染領域中，重金屬主要是指對生物有明顯毒性的金屬元素或類金屬元素，如汞、鎘、鉛、鉻、鋅、銅、鈷、鎳、錫、砷等，此類污染物不易被微生物降解。</div>
+                                    <div class="mdl-card__actions mdl-card--border">
+                                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" target="_blank" href="https://en.wikipedia.org/wiki/Toxic_heavy_metal">瞭解更多</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    
+                    <table class="info">
+                        <tr>
+                            <td class="location">
+                                <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--fab mdl-button--colored" id="bloodjelly-location-taipei"><i class="material-icons">location_on</i></button><br>
+                                <div class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect demo-card-square mdl-card mdl-shadow--2dp" for="bloodjelly-location-taipei" id="bloodjelly-location-taipei-detail">
+                                    <div class="mdl-card__title mdl-card--expand">
+                                        <h2 class="mdl-card__title-text mdl-color-text--accent">台北</h2>
+                                    </div>
+                                    <div class="mdl-card__supporting-text"><strong>双鵬黑心鴨血　新北11火鍋店進貨</strong><br><small>&copy; 2015 祁容玉　聯合新聞</small></div>
+                                    <div class="mdl-card__supporting-text">11 間店家<br>12,000 公斤</div>
+                                    <div class="mdl-card__actions mdl-card--border">
+                                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="https://video.udn.com/news/278175" target="_blank">閱讀新聞</a>
+                                    </div>
+                                </div>
+
+                                <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--fab mdl-button--colored" id="bloodjelly-location-taoyuan"><i class="material-icons">location_on</i></button><br>
+                                <div class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect demo-card-square mdl-card mdl-shadow--2dp" for="bloodjelly-location-taoyuan" id="bloodjelly-location-taoyuan-detail">
+                                    <div class="mdl-card__title mdl-card--expand">
+                                        <h2 class="mdl-card__title-text mdl-color-text--accent">桃園</h2>
+                                    </div>
+                                    <div class="mdl-card__supporting-text"><strong>双鵬問題鴨血 桃園查傳統市場大賣場</strong><br><small>&copy; 2015 曾增勳　聯合新聞</small></div>
+                                    <div class="mdl-card__supporting-text">27 間店家<br>617 公斤<br></div>
+                                    <div class="mdl-card__actions mdl-card--border">
+                                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" target="_blank" href="https://video.udn.com/news/278466">閱讀新聞</a>
+                                    </div>
+                                </div>
+
+                                <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--fab mdl-button--colored" id="bloodjelly-location-taichung"><i class="material-icons">location_on</i></button><br>
+                                <div class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect demo-card-square mdl-card mdl-shadow--2dp" for="bloodjelly-location-taichung" id="bloodjelly-location-taichung-detail">
+                                    <div class="mdl-card__title mdl-card--expand">
+                                        <h2 class="mdl-card__title-text mdl-color-text--accent">台中</h2>
+                                    </div>
+                                    <div class="mdl-card__supporting-text mdl-typography--text-capitalize"><strong>台中市府餐廳進黑心水血 公務員吃下肚</strong><br><small>&copy; 2015 林佩均　聯合新聞</small></div>
+                                    <div class="mdl-card__supporting-text">159 間店家<br>1,649.97 公斤</div>
+                                    <div class="mdl-card__actions mdl-card--border">
+                                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="https://video.udn.com/news/279093" target="_blank">閱讀新聞</a>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="chemical">
+                                <div id="bloodjelly-effects-dementia-group">
+                                    <div id="bloodjelly-effects-dementia" class="icon mdl-color-text--accent material-icons md-48">gps_fixed</div>
+                                    <div class="tooltip mdl-typography--font-medium" for="bloodjelly-effects-dementia">失智</div>
+                                </div>
+                                <div id="bloodjelly-effects-liver-group">
+                                    <div id="bloodjelly-effects-liver" class="icon mdl-color-text--accent material-icons md-48">gps_fixed</div>
+                                    <div class="tooltip mdl-typography--font-medium" for="bloodjelly-effects-liver">肝癌</div>
+                                </div>
+                                <div id="bloodjelly-effects-diarrhea-group">
+                                    <div id="bloodjelly-effects-diarrhea" class="icon mdl-color-text--accent material-icons md-48">gps_fixed</div>
+                                    <div class="tooltip mdl-typography--font-medium" for="bloodjelly-effects-diarrhea">腹瀉</div>
+                                </div>
+                                <div id="bloodjelly-effects-kidney-group">
+                                    <div id="bloodjelly-effects-kidney" class="icon mdl-color-text--accent material-icons md-48">gps_fixed</div>
+                                    <div class="tooltip mdl-typography--font-medium" for="bloodjelly-effects-kidney">腎癌</div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+</div>
+            <!-- Timeline Case #03 Seaweed March -->
+            <div class="section mdl-typography--text-center" id="section4">
+                <div class="slide home">
+                    <div class="mdl-typography--display-2 mdl-color-text--accent mdl-typography--text-lowercase">事件＃０３</div>
+                    <div class="mdl-typography--display-4 mdl-color-text--white">海帶</div>
+                    <div class="mdl-typography--display-1 mdl-color-text--white">三月份</div>
+                    <div class="case-menu"><a id="moveToCase3Info" href="#"><button class="mdl-button mdl-js-button mdl-color-text--white">了解事發地點及影響</button></a></div>
+                </div>
+                <div class="slide">
+                    
+                    <!-- Info title -->
+                    <table class="info-title">
+                        <tr>
+                            <th colspan="2" class="mdl-typography--display-1 mdl-color-text--accent mdl-typography--text-lowercase">事件＃０３</th>
+                        </tr>
+                        <tr>
+                            <th colspan="2" class="mdl-typography--display-3 mdl-typography--text-center mdl-color-text--white">海帶</th>
+                        </tr>
+                        <tr>
+                            <th colspan="2" class="mdl-typography--display-2 mdl-typography--text-center mdl-color-text--white contamination">黑心食品</th>
+                        </tr>
+                        <tr class="info-subtitle">
+                            <td class="mdl-typography--display-1 mdl-typography--text-right mdl-color-text--white"><br><br>事發地區</td>
+                            <td class="mdl-typography--display-1 mdl-typography--text-left mdl-color-text--white"><br><br>身理影響</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <!-- chemical card -->
+                                <div class="chemical-card demo-card-wide mdl-card mdl-shadow--2dp" id="ammoniumbicarbonate">
+                                     <div class="mdl-card__title">
+                                        <h2 class="mdl-card__title-text mdl-typography--text-capitalize"></h2>
+                                    </div>
+                                    <h4 class="mdl-typography--text-left mdl-typography--text-capitalize">工業用碳酸氫銨 <small>&copy; 維基百科</small></h4>
+                                    <div class="mdl-card__supporting-text">碳酸氫銨（Ammonium bicarbonate）是氨的碳酸鹽，分子式為NH<sub>4</sub>HCO<sub>3</sub>。二氧化碳通入碳酸銨溶液中也可得到碳酸氫銨。它是白色粉末，帶有類似氨水的刺鼻味道，在水中溶解度不大。碳酸氫銨溶液放置在空氣中或加熱時會放出二氧化碳，溶液也變為鹼性。水溶液中的所有碳酸鹽在加熱煮沸時產生分解，釋放二氧化碳和與碳酸離子反應形成碳酸氫鹽的物質，</div>
+                                    <div class="mdl-card__supporting-text">碳酸氫銨在室溫下是一種白色結晶，帶有輕微氨氣氣味的粉末，溶於水形成鹼性溶液。但不溶於丙酮和醇類。碳酸氫銨在 36~60 °C時會分解產生氨氣、二氧化碳和水，這是吸熱的過程（和許多銨鹽一樣，會使水溫下降）。與酸反應產生二氧化碳，與鹼則產生氨氣。</div>
+                                    <div class="mdl-card__supporting-text">碳酸氫銨會對皮膚、眼和呼吸系統造成刺激的刺激物。在1987年長子縣化肥廠污染水源事故中，飲用受污染水源的人出現了急性中毒反應。</div>
+                                    <div class="mdl-card__actions mdl-card--border">
+                                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="https://zh.wikipedia.org/wiki/%E7%A2%B3%E9%85%B8%E6%B0%A2%E9%93%B5" target="_blank">瞭解更多</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    
+                    <table class="info">
+                        <tr>
+                            <td class="location">
+                                <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--fab mdl-button--colored" id="seaweed-location-taichung"><i class="material-icons">location_on</i></button><br>
+                                <div class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect demo-card-square mdl-card mdl-shadow--2dp" for="seaweed-location-taichung" id="seaweed-location-taichung-detail">
+                                    <div class="mdl-card__title mdl-card--expand">
+                                        <h2 class="mdl-card__title-text mdl-color-text--accent">台中</h2>
+                                    </div>
+                                    <div class="mdl-card__supporting-text mdl-typography--text-capitalize"><strong>13萬公斤黑心海帶　大台中全吞下肚</strong><br><small>&copy; 2015 曾雪蒨　蘋果日報</small></div>
+                                    <div class="mdl-card__supporting-text">130,000 公斤</div>
+                                    <div class="mdl-card__actions mdl-card--border">
+                                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="http://www.appledaily.com.tw/realtimenews/article/new/20150324/580178/" target="_blank">閱讀新聞</a>
+                                    </div>
+                                </div>
+
+                                <br>
+                                <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--fab mdl-button--colored" id="seaweed-location-kaohsiung"><i class="material-icons">location_on</i></button><br>
+                                <div class="mdl-menu mdl-menu--top-left mdl-js-menu mdl-js-ripple-effect demo-card-square mdl-card mdl-shadow--2dp" for="seaweed-location-kaohsiung" id="seaweed-location-kaohsiung-detail">
+                                    <div class="mdl-card__title mdl-card--expand">
+                                        <h2 class="mdl-card__title-text mdl-color-text--accent">高雄</h2>
+                                    </div>
+                                    <div class="mdl-card__supporting-text mdl-typography--text-capitalize"><strong>食藥署持續追蹤違法添加非食品級碳酸氫銨黑心海帶</strong><br><small>&copy; 2015 衛生福利部食品藥物管理署</small></div>
+                                    <div class="mdl-card__supporting-text">49 間店家<br>257.3 公斤</div>
+                                    <div class="mdl-card__actions mdl-card--border">
+                                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="http://www.fda.gov.tw/TC/newsContent.aspx?id=12255&chk=27f049ff-c08f-46a7-a935-27e30b1d7ae4#.Vfh-VmR97IF" target="_blank">閱讀新聞</a>
+                                    </div>
+                                </div>
+
+                                <br>
+                                <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--fab mdl-button--colored" id="seaweed-location-pingtung"><i class="material-icons">location_on</i></button>
+                                <div class="mdl-menu mdl-menu--top-left mdl-js-menu mdl-js-ripple-effect demo-card-square mdl-card mdl-shadow--2dp" for="seaweed-location-pingtung" id="seaweed-location-pingtung-detail">
+                                    <div class="mdl-card__title mdl-card--expand">
+                                        <h2 class="mdl-card__title-text mdl-color-text--accent">屏東</h2>
+                                    </div>
+                                    <div class="mdl-card__supporting-text mdl-typography--text-capitalize"><strong>食藥署持續追蹤違法添加非食品級碳酸氫銨黑心海帶</strong><br><small>&copy; 2015 衛生福利部食品藥物管理署</small></div>
+                                    <div class="mdl-card__supporting-text">5,640 公斤</div>
+                                    <div class="mdl-card__actions mdl-card--border">
+                                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="http://www.fda.gov.tw/TC/newsContent.aspx?id=12255&chk=27f049ff-c08f-46a7-a935-27e30b1d7ae4#.Vfh-VmR97IF" target="_blank">閱讀新聞</a>
+                                    </div>
+                                </div>
+
+                            </td>
+                            <td class="chemical">
+                                <div id="seaweed-effects-central-group">
+                                    <div id="seaweed-effects-central" class="icon mdl-color-text--accent material-icons md-48">gps_fixed</div>
+                                    <div class="tooltip mdl-typography--font-medium" for="seaweed-effects-central">中樞神經傷害</div>
+                                </div>
+                                <div id="seaweed-effects-heart-group">
+                                    <div id="seaweed-effects-heart" class="icon mdl-color-text--accent material-icons md-48">gps_fixed</div>
+                                    <div class="tooltip mdl-typography--font-medium" for="seaweed-effects-heart">心臟病變</div>
+                                </div>
+                                <div id="seaweed-effects-liver-group">
+                                    <div id="seaweed-effects-liver" class="icon mdl-color-text--accent material-icons md-48">gps_fixed</div>
+                                    <div class="tooltip mdl-typography--font-medium" for="seaweed-effects-liver">肝病變</div>
+                                </div>
+                                <div id="seaweed-effects-kidney-group">
+                                    <div id="seaweed-effects-kidney" class="icon mdl-color-text--accent material-icons md-48">gps_fixed</div>
+                                    <div class="tooltip mdl-typography--font-medium" for="seaweed-effects-kidney">腎病變</div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+</div>
+            <!-- Timeline Case #04 Bubble Tea April -->
+            <div class="section mdl-typography--text-center" id="section5">
+                <div class="slide home">
+                    <div class="mdl-typography--display-2 mdl-color-text--accent mdl-typography--text-lowercase">事件＃０４</div>
+                    <div class="mdl-typography--display-4 mdl-color-text--white">手搖飲料</div>
+                    <div class="mdl-typography--display-1 mdl-color-text--white">四月份</div>
+                    <div class="case-menu"><a id="moveToCase4Info" href="#"><button class="mdl-button mdl-js-button mdl-color-text--white">了解事發地點及影響</button></a></div>
+                </div>
+                <div class="slide">
+                    
+                    <!-- Info title -->
+                    <table class="info-title">
+                        <tr>
+                            <th colspan="2" class="mdl-typography--display-1 mdl-color-text--accent mdl-typography--text-lowercase">事件＃０４</th>
+                        </tr>
+                        <tr>
+                            <th colspan="2" class="mdl-typography--display-3 mdl-typography--text-center mdl-color-text--white">手搖飲料</th>
+                        </tr>
+                        <tr>
+                            <th colspan="2" class="mdl-typography--display-2 mdl-typography--text-center mdl-color-text--white contamination">黑心食品</th>
+                        </tr>
+                        <tr class="info-subtitle">
+                            <td class="mdl-typography--display-1 mdl-typography--text-right mdl-color-text--white"><br><br>事發地區</td>
+                            <td class="mdl-typography--display-1 mdl-typography--text-left mdl-color-text--white"><br><br>身理影響</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <!-- chemical card -->
+                                <div class="chemical-card demo-card-wide mdl-card mdl-shadow--2dp" id="fipronil">
+                                    <div class="mdl-card__title">
+                                        <h2 class="mdl-card__title-text mdl-typography--text-capitalize"></h2>
+                                    </div>
+                                    <h4 class="mdl-typography--text-left mdl-typography--text-capitalize">芬普尼 <small>&copy; 維基百科</small></h4>
+                                    <div class="mdl-card__supporting-text">芬普尼（拉丁語：Fipronil）為農藥的一種；對於甲殼類動物、螞蟻、白蟻、甲蟲、蟑螂、扁蝨、浮游動物和蜜蜂等昆蟲有效，因此芬普尼多用於殺蟲劑使用，包括許多常見的螞蟻、白蟻、甲蟲、蟑螂、扁蝨等殺蟲劑或是寵物的跳蚤產品。殺蟲劑產品形式多為顆粒、凝膠餌或液狀產品。一些研究實驗證實芬普尼會危害動物和生態環境，同時它是一種致癌物質。</div>
+                                    <div class="mdl-card__supporting-text">美國環境保護署已將芬普尼列為致癌物質，於一項動物實驗中證明長期暴露於芬普尼會引起甲狀腺良性和惡性的腫瘤產生。</div>
+                                    <div class="mdl-card__supporting-text">在一項動物實驗研究中，將芬普尼注入老鼠胃2年的時間，發現會造成甲狀腺有良性與惡性腫瘤的產生。因此，美國環保局已將芬普尼列為可能成為人類的致癌物質之一。</div>
+                                    <div class="mdl-card__supporting-text">一項動物實驗中顯示，懷孕期間接觸芬普尼時，生出來的胎兒比沒有接觸芬普尼的胎兒細小，因此胎兒需要花更長的時間使他們能完全的成熟，即造成發展延緩的問題。另一項研究發現，長期在芬普尼的環境下也影響生育能力，從動物實驗證實，可能會有減少交配、生育能力下降、產子數減少和降低受孕機會。</div>
+                                    <div class="mdl-card__supporting-text">暴露於芬普尼會產生以下症狀：頭痛、噁心、頭暈、乏力及眼睛的刺激和傷害。</div>
+                                    <div class="mdl-card__actions mdl-card--border">
+                                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="https://zh.wikipedia.org/wiki/%E8%8A%AC%E6%99%AE%E5%B0%BC" target="_blank">瞭解更多</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    
+                    <table class="info">
+                        <tr>
+                            <td class="location">
+
+                                <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--fab mdl-button--colored" id="bubbletea-location-taoyuan"><i class="material-icons">location_on</i></button><br>
+                                <div class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect demo-card-square mdl-card mdl-shadow--2dp" for="bubbletea-location-taoyuan" id="bubbletea-location-taoyuan-detail">
+                                    <div class="mdl-card__title mdl-card--expand">
+                                        <h2 class="mdl-card__title-text mdl-color-text--accent">桃園</h2>
+                                    </div>
+                                    <div class="mdl-card__supporting-text mdl-typography--text-capitalize"><strong>舞茶道「白毫綠茶」　芬普尼0.003ppm超標下架</strong><br><small>&copy; 2015 東森新聞雲生活中心</small></div>
+                                    <div class="mdl-card__supporting-text">167.4 公斤</div>
+                                    <div class="mdl-card__actions mdl-card--border">
+                                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="http://www.ettoday.net/news/20150429/499898.htm" target="_blank">閱讀新聞</a>
+                                    </div>
+                                </div>
+
+                                <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--fab mdl-button--colored" id="bubbletea-location-taichung"><i class="material-icons">location_on</i></button><br>
+                                <div class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect demo-card-square mdl-card mdl-shadow--2dp" for="bubbletea-location-taichung" id="bubbletea-location-taichung-detail">
+                                    <div class="mdl-card__title mdl-card--expand">
+                                        <h2 class="mdl-card__title-text mdl-color-text--accent">台中</h2>
+                                    </div>
+                                    <div class="mdl-card__supporting-text mdl-typography--text-capitalize"><strong>又4家被驗出芬普尼　台中衛生局：休閒小站回收340公斤</strong><br>&copy; 2015 東森新聞雲地方中心</div>
+                                    <div class="mdl-card__supporting-text">363.3 公斤</div>
+                                    <div class="mdl-card__actions mdl-card--border">
+                                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="http://www.ettoday.net/news/20150505/502270.htm" target="_blank">閱讀新聞</a>
+                                    </div>
+                                </div>
+
+                                <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--fab mdl-button--colored" id="bubbletea-location-tainan"><i class="material-icons">location_on</i></button><br>
+                                <div class="mdl-menu mdl-menu--top-left mdl-js-menu mdl-js-ripple-effect demo-card-square mdl-card mdl-shadow--2dp" for="bubbletea-location-tainan" id="bubbletea-location-tainan-detail">
+                                    <div class="mdl-card__title mdl-card--expand">
+                                        <h2 class="mdl-card__title-text mdl-color-text--accent">台南</h2>
+                                    </div>
+                                    <div class="mdl-card__supporting-text mdl-typography--text-capitalize"><strong>台南市春春館「伯爵紅茶」驗出芬尼普超標3.5倍</strong><br>&copy; 2015 東森新聞雲生活中心</div>
+                                    <div class="mdl-card__supporting-text">189 公斤</div>
+                                    <div class="mdl-card__actions mdl-card--border">
+                                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="http://www.ettoday.net/news/20150513/505904.htm" target="_blank">閱讀新聞</a>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="chemical">
+                                <div id="bubbletea-effects-liver-group">
+                                    <div id="bubbletea-effects-liver" class="icon mdl-color-text--accent material-icons md-48">gps_fixed</div>
+                                    <div class="tooltip mdl-typography--font-medium" for="bubbletea-effects-liver">肝病變</div>
+                                </div>
+                                <div id="bubbletea-effects-kidney-group">
+                                    <div id="bubbletea-effects-kidney" class="icon mdl-color-text--accent material-icons md-48">gps_fixed</div>
+                                    <div class="tooltip mdl-typography--font-medium" for="bubbletea-effects-kidney">腎病變</div>
+                                </div>
+                                <div id="bubbletea-effects-thyroid-group">
+                                    <div id="bubbletea-effects-thyroid" class="icon mdl-color-text--accent material-icons md-48">gps_fixed</div>
+                                    <div class="tooltip mdl-typography--font-medium" for="bubbletea-effects-thyroid">甲狀腺癌</div>
+                                </div>
+                                <div id="bubbletea-effects-infertility-group">
+                                    <div id="bubbletea-effects-infertility" class="icon mdl-color-text--accent material-icons md-48">gps_fixed</div>
+                                    <div class="tooltip mdl-typography--font-medium" for="bubbletea-effects-infertility">不孕</div>
+                                </div>
+                                <div id="bubbletea-effects-reproductive-group">
+                                    <div id="bubbletea-effects-reproductive" class="icon mdl-color-text--accent material-icons md-48">gps_fixed</div>
+                                    <div class="tooltip mdl-typography--font-medium" for="bubbletea-effects-reproductive">生殖系統方面的癌症</div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+</div>
+            <!-- Timeline Case #05 Candied Fruit May -->
+            <div class="section mdl-typography--text-center" id="section6">
+                <div class="slide home">
+                    <div class="mdl-typography--display-2 mdl-color-text--accent mdl-typography--text-lowercase">事件＃０５</div>
+                    <div class="mdl-typography--display-4 mdl-color-text--white">罐頭水果</div>
+                    <div class="mdl-typography--display-1 mdl-color-text--white">五月份</div>
+                    <div class="case-menu"><a id="moveToCase5Info" href="#"><button class="mdl-button mdl-js-button mdl-color-text--white">了解事發地點及影響</button></a></div>
+                </div>
+                <div class="slide">
+                    
+                    <!-- Info title -->
+                    <table class="info-title">
+                        <tr>
+                            <th colspan="2" class="mdl-typography--display-1 mdl-color-text--accent mdl-typography--text-lowercase">事件＃０５</th>
+                        </tr>
+                        <tr>
+                            <th colspan="2" class="mdl-typography--display-3 mdl-typography--text-center mdl-color-text--white">罐頭水果</th>
+                        </tr>
+                        <tr>
+                            <th colspan="2" class="mdl-typography--display-2 mdl-typography--text-center mdl-color-text--white contamination">黑心食品</th>
+                        </tr>
+                        <tr class="info-subtitle">
+                            <td class="mdl-typography--display-1 mdl-typography--text-right mdl-color-text--white"><br><br>事發地區</td>
+                            <td class="mdl-typography--display-1 mdl-typography--text-left mdl-color-text--white"><br><br>身理影響</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <!-- chemical card -->
+                                <div class="chemical-card demo-card-wide mdl-card mdl-shadow--2dp" id="sodiummetabisulfite">
+                                    <div class="mdl-card__title">
+                                        <h2 class="mdl-card__title-text mdl-typography--text-capitalize"></h2>
+                                    </div>
+                                    <h4 class="mdl-typography--text-left mdl-typography--text-capitalize">偏亞硫酸氫鈉 <small>&copy; 維基百科</small></h4>
+                                    <div class="mdl-card__supporting-text">偏亞硫酸氫鈉，是一種無機化合物。它當用作消毒劑、抗氧化劑及防腐劑。</div>
+                                    <div class="mdl-card__supporting-text">白色或微黃色結晶，溶於水，水溶液呈酸性。此外亦溶於甘油，微溶於乙醇。在空氣中易被氧化為硫酸鈉。受潮易分解，且熔點為150°C。與強酸發生化學反應，並生成二氧化硫及相應鹽類。</div>
+                                    <div class="mdl-card__supporting-text">雖然偏亞硫酸氫鈉可用於食物的漂白跟防腐，但由於偏亞硫酸氫鈉對人體有較大的損傷，所以其用量要嚴格限定。可是，仍然有些不法商戶向食品中大量添加偏亞硫酸氫鈉用來漂白，這會對使用者的健康產生損害。</div>
+                                    <div class="mdl-card__actions mdl-card--border">
+                                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="https://zh.wikipedia.org/wiki/%E7%84%A6%E4%BA%9A%E7%A1%AB%E9%85%B8%E9%92%A0" target="_blank">瞭解更多</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    
+                    <table class="info">
+                        <tr>
+                            <td class="location">
+                                <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--fab mdl-button--colored" id="candiedfruit-location-changhua"><i class="material-icons">location_on</i></button><br>
+                                <div class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect demo-card-square mdl-card mdl-shadow--2dp" for="candiedfruit-location-changhua" id="candiedfruit-location-changhua-detail">
+                                    <div class="mdl-card__title mdl-card--expand">
+                                        <h2 class="mdl-card__title-text mdl-color-text--accent">彰化</h2>
+                                    </div>
+                                    <div class="mdl-card__supporting-text mdl-typography--text-capitalize"><strong>黑心　化工蜜餞扣207噸</strong><br>&copy; 2015 鄧惠珍　蘋果日報</div>
+                                    <div class="mdl-card__supporting-text">207,000 公斤</div>
+                                    <div class="mdl-card__actions mdl-card--border">
+                                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="http://www.appledaily.com.tw/appledaily/article/headline/20150522/36564816/" target="_blank">閱讀新聞</a>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="chemical">
+                                <div id="candiedfruit-effects-liver-group">
+                                    <div id="candiedfruit-effects-liver" class="icon mdl-color-text--accent material-icons md-48">gps_fixed</div>
+                                    <div class="tooltip mdl-typography--font-medium" for="candiedfruit-effects-liver">肝癌</div>
+                                </div>
+                                <div id="candiedfruit-effects-kidney-group">
+                                    <div id="candiedfruit-effects-kidney" class="icon mdl-color-text--accent material-icons md-48">gps_fixed</div>
+                                    <div class="tooltip mdl-typography--font-medium" for="candiedfruit-effects-kidney">腎癌</div>
+                                </div>
+                                <div id="candiedfruit-effects-diarrhea-group">
+                                    <div id="candiedfruit-effects-diarrhea" class="icon mdl-color-text--accent material-icons md-48">gps_fixed</div>
+                                    <div class="tooltip mdl-typography--font-medium" for="candiedfruit-effects-diarrhea">腹瀉</div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!-- Designer -->
+            <div class="section mdl-typography--text-left" id="section7">
+            	<div class="content">
+                    <table>
+                        <tr>
+                            <td>
+                                <div class="demo-card-image mdl-card mdl-shadow--2dp">
+                                    <div class="mdl-card__title mdl-card--expand"></div>
+                                    <div class="mdl-card__actions">
+                                        <span class="demo-card-image__filename"></span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="demo-card-wide mdl-card mdl-shadow--2dp mdl-cell--12-col">
+                                    <div class="mdl-card__title">
+                                        <h2 class="mdl-card__title-text">來自設計師的訊息</h2>
+                                    </div>
+                                    <div class="mdl-card__supporting-text">近年來，台灣發生了許多令人震驚的食品安全事件，且幾乎每個月都有新的一則被爆出。大部份的台灣人民雖然非常重視食品安全的問題，卻沒有使這一類的醜聞逐月遞減。這也明顯顯示了台灣人民對此類事件的重視度不夠強烈，甚至視而不見或是漠不關心。</div>
+                                    <div class="mdl-card__supporting-text">這項專案的成立宗旨是為了能影響住在台灣的人民從過記得教訓中了解並且重視黑心食品我人的危害。這項專案是以互動式多媒體的形式呈現以體現專案宗旨。以互動式網頁為主要傳達媒體能使台灣人民能更了解在這塊土地上近期發生的食品安全問題。</div>
+                                    <div class="name mdl-card__actions mdl-card--border mdl-typography--text-right">
+                                        <div class="mdl-typography--title">林聖哲（Jerry）</div>
+                                        <div class="mdl-typography--body-1">多媒體設計碩士<br>蒙納許大學</div>
+                                    </div>
+                                    <div class="mdl-card__menu">
+                                        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                                            <a href="mailto:slin65@student.monash.edu" target="_top"><i class="material-icons">mail</i></a>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+				</div>
+            </div>
+            
+            <!-- Credit -->
+            <div class="section mdl-typography--text-center" id="section8">
+                <div class="mdl-typography--display-2 mdl-typography--text-left mdl-color-text--white">資料來源與聲明</div><br>
+                <div class="content">
+                    <div class="mdl-typography--body-1 mdl-typography--text-left mdl-color-text--white"><strong>蘋果日報</strong></div>
+                    <ul class="mdl-typography--body-1 mdl-typography--text-left mdl-color-text--white">
+                        <li><a class="mdl-typography--text-capitalize" href="http://www.appledaily.com.tw/realtimenews/article/new/20150124/548200/" target="_blank">驗出二甲基黃　「正大香」腐乳回收41249瓶</a></li>
+                        <li><a class="mdl-typography--text-capitalize" href="http://www.appledaily.com.tw/realtimenews/article/new/20150324/580178/" target="_blank">13萬公斤黑心海帶　大台中全吞下肚</a></li>
+                        <li><a class="mdl-typography--text-capitalize" href="http://www.appledaily.com.tw/appledaily/article/headline/20150522/36564816/" target="_blank">黑心 化工蜜餞扣207噸</a></li>
+                    </ul>
+                    <div class="mdl-typography--body-1 mdl-typography--text-left mdl-color-text--white"><strong>Álvaro Trigo</strong></div>
+                    <ul class="mdl-typography--body-1 mdl-typography--text-left mdl-color-text--white">
+                        <li><a class="mdl-typography--text-lowercase" href="http://alvarotrigo.com/fullPage/" target="_blank">fullPage.js</a></li>
+                    </ul>
+                    <div class="mdl-typography--body-1 mdl-typography--text-left mdl-color-text--white"><strong>東森新聞雲</strong></div>
+                    <ul class="mdl-typography--body-1 mdl-typography--text-left mdl-color-text--white">
+                        <li><a class="mdl-typography--text-capitalize" href="http://www.ettoday.net/news/20150429/499898.htm" target="_blank">舞茶道「白毫綠茶」　芬普尼0.003ppm超標下架</a></li>
+                        <li><a class="mdl-typography--text-capitalize" href="http://www.ettoday.net/news/20150505/502270.htm"target="_blank">又4家被驗出芬普尼　台中衛生局：休閒小站回收340公斤</a></li>
+                        <li><a class="mdl-typography--text-capitalize" href="http://www.ettoday.net/news/20150513/505904.htm" target="_blank">台南市春春館「伯爵紅茶」驗出芬尼普超標3.5倍</a></li>
+                    </ul>
+                    
+                    <div class="mdl-typography--body-1 mdl-typography--text-left mdl-color-text--white"><strong>衛生福利部食品藥物管理署</strong></div>
+                    <ul class="mdl-typography--body-1 mdl-typography--text-left mdl-color-text--white">
+                        <li><a class="mdl-typography--text-capitalize" href="http://www.fda.gov.tw/TC/newsContent.aspx?id=12255&chk=27f049ff-c08f-46a7-a935-27e30b1d7ae4#.Vfh-VmR97IF" target="_blank">食藥署持續追蹤違法添加非食品級碳酸氫銨黑心海帶</a></li>
+                    </ul>
+                    
+                    <div class="mdl-typography--body-1 mdl-typography--text-left mdl-color-text--white"><strong>Gerd Altmann (Pixabay username: geralt)</strong></div>
+                    <ul class="mdl-typography--body-1 mdl-typography--text-left mdl-color-text--white">
+                        <li><a class="mdl-typography--text-capitalize" href="https://pixabay.com/en/family-mother-children-boy-76786/" target="_blank">Family, Mother, Children, Boy</a></li>
+                        <li><a class="mdl-typography--text-capitalize" href="https://pixabay.com/en/man-woman-businessmen-economy-76202/" target="_blank">Man, Woman, Businessmen, Economy</a></li>
+                    </ul>
+                    
+                    <div class="mdl-typography--body-1 mdl-typography--text-left mdl-color-text--white"><strong>Google</strong></div>
+                    <ul class="mdl-typography--body-1 mdl-typography--text-left mdl-color-text--white">
+                        <li><a class="mdl-typography--text-capitalize" href="https://www.google.com/design/spec" target="_blank">Google design guidelines</a></li>
+                        <li><a class="mdl-typography--text-capitalize" href="http://www.getmdl.io" target="_blank">Material design lite</a></li>
+                    </ul>
+                    
+                    <div class="mdl-typography--body-1 mdl-typography--text-left mdl-color-text--white"><strong>漢頡網棧</strong></div>
+                    <ul class="mdl-typography--body-1 mdl-typography--text-left mdl-color-text--white">
+                        <li><a class="mdl-typography--text-capitalize" href="http://www.eion.com.tw/Blogger/?Pid=1030" target="_blank">向量台灣地圖</a></li>
+                    </ul>
+                    
+                    <div class="mdl-typography--body-1 mdl-typography--text-left mdl-color-text--white"><strong>今日傳媒</strong></div>
+                    <ul class="mdl-typography--body-1 mdl-typography--text-left mdl-color-text--white">
+                        <li><a class="mdl-typography--text-capitalize" href="http://www.nownews.com/n/2015/01/21/1582298" target="_blank">同廠代工！毒腐乳再爆　度小月紅麴豆腐乳也中</a></li>
+                    </ul>
+                    <div class="mdl-typography--body-1 mdl-typography--text-left mdl-color-text--white"><strong>Silvia (Pixabay username: sipa)</strong></div>
+                    <ul class="mdl-typography--body-1 mdl-typography--text-left mdl-color-text--white">
+                        <li><a class="mdl-typography--text-capitalize" href="https://pixabay.com/en/man-run-runners-race-sporty-human-1001591/" target="_blank">Man, Run, Runners Race, Sporty, Human</a></li>
+                    </ul>
+                    <div class="mdl-typography--body-1 mdl-typography--text-left mdl-color-text--white"><strong>聯合新聞</strong></div>
+                    <ul class="mdl-typography--body-1 mdl-typography--text-left mdl-color-text--white">
+                        <li><a class="mdl-typography--text-capitalize" href="https://video.udn.com/news/278466" target="_blank">双鵬問題鴨血 桃園查傳統市場大賣場</a></li>
+                        <li><a class="mdl-typography--text-capitalize" href="https://video.udn.com/news/278175" target="_blank">双鵬黑心鴨血 新北11火鍋店進貨</a></li>
+                        <li><a class="mdl-typography--text-capitalize" href="https://video.udn.com/news/279093" target="_blank">台中市府餐廳進黑心水血 公務員吃下肚</a></li>
+                    </ul>
+                    <div class="mdl-typography--body-1 mdl-typography--text-left mdl-color-text--white"><strong>Unkown (Pixabay username: OpenClipartVectors)</strong></div>
+                    <ul class="mdl-typography--body-1 mdl-typography--text-left mdl-color-text--white">
+                        <li><a class="mdl-typography--text-capitalize"
+                               href="https://pixabay.com/en/divorce-parents-child-people-156444/"
+                               target="_blank">Divorce, Parents, Child, People</a></li>
+                    </ul>
+                    <div class="mdl-typography--body-1 mdl-typography--text-left mdl-color-text--white"><strong>維基百科</strong></div>
+                    <ul class="mdl-typography--body-1 mdl-typography--text-left mdl-color-text--white">
+                        <li><a class="mdl-typography--text-capitalize"
+                               href="https://zh.wikipedia.org/wiki/%E7%A2%B3%E9%85%B8%E6%B0%A2%E9%93%B5"
+                               target="_blank">碳酸氫銨</a></li>
+                        <li><a class="mdl-typography--text-capitalize"
+                               href="https://zh.wikipedia.org/wiki/%E8%8A%AC%E6%99%AE%E5%B0%BC"
+                               target="_blank">芬普尼</a></li>
+                        <li><a class="mdl-typography--text-capitalize"
+                               href="https://zh.wikipedia.org/wiki/%E9%87%8D%E9%87%91%E5%B1%9E"
+                               target="_blank">重金屬</a></li>
+                        <li><a class="mdl-typography--text-capitalize"
+                               href="https://zh.wikipedia.org/wiki/%E7%94%B2%E5%9F%BA%E9%BB%84"
+                               target="_blank">甲基黃</a></li>
+                        <li><a class="mdl-typography--text-capitalize"
+                               href="https://zh.wikipedia.org/wiki/%E7%84%A6%E4%BA%9A%E7%A1%AB%E9%85%B8%E9%92%A0"
+                               target="_blank">偏亞硫酸氫鈉</a></li>
+                    </ul>
+                    <div class="thanks mdl-typography--subhead mdl-typography--text-left mdl-color-text--white" id="thanks">特別感謝 <strong>Jeffery Janet</strong> 與<br><strong>Tamara Jordan</strong> 的支援。</div>
+                    <div class="thanks mdl-typography--caption mdl-typography--text-left mdl-color-text--white">所有資料與資源之使用與修改皆為教育用。</div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
