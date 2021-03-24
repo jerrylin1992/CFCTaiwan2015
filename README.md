@@ -27,5 +27,5 @@ How to run<br>
 	⁃	For Traditional Chinese version, please run “index_tc.html” on Google Chrome with full screen for the fully experience and performance.<br>
 <br>
 How to access through public URL<br>
-	⁃	For English version, please access via this link: http://jerrylin1992.github.io/CFCTaiwan2015/index_en.html<br>
-	⁃	For Traditional Chinese version, please access via this link: http://jerrylin1992.github.io/CFCTaiwan2015/index_tc.html<br>
+	⁃	For English version, please access via this link:<br>http://jerrylin1992.github.io/CFCTaiwan2015/index_en.html<br>
+	⁃	For Traditional Chinese version, please access via this link:<br>http://jerrylin1992.github.io/CFCTaiwan2015/index_tc.html<br>
